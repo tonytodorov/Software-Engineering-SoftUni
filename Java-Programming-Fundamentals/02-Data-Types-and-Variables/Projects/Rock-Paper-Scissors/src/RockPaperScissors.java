@@ -3,13 +3,13 @@ import java.util.Scanner;
 
 public class RockPaperScissors {
 
-    private static final String rock = "Rock";
-    private static final String paper = "Paper";
-    private static final String scissors = "Scissors";
+    private static final String ROCK = "Rock";
+    private static final String PAPER = "Paper";
+    private static final String SCISSORS = "Scissors";
 
-    private static final String win = "win";
-    private static final String lose = "lose";
-    private static final String draw = "draw";
+    private static final String WIN = "win";
+    private static final String LOSE = "lose";
+    private static final String DRAW = "draw";
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -22,32 +22,32 @@ public class RockPaperScissors {
         String computerChoose = computerChoose(generateNumber);
 
         if (playerChoose.equals("r") || playerChoose.equals("rock")){
-            if (computerChoose.equals(rock)){
-                result = draw;
-            }else if (computerChoose.equals(paper)){
-                result = lose;
-            }else if (computerChoose.equals(scissors)){
-                result = win;
+            if (computerChoose.equals(ROCK)){
+                result = DRAW;
+            }else if (computerChoose.equals(PAPER)){
+                result = LOSE;
+            }else if (computerChoose.equals(SCISSORS)){
+                result = WIN;
             }
         }
 
         if (playerChoose.equals("p") || playerChoose.equals("paper")){
-            if (computerChoose.equals(rock)){
-                result = win;
-            }else if (computerChoose.equals(paper)){
-                result = draw;
-            }else if (computerChoose.equals(scissors)){
-                result = lose;
+            if (computerChoose.equals(ROCK)){
+                result = WIN;
+            }else if (computerChoose.equals(PAPER)){
+                result = DRAW;
+            }else if (computerChoose.equals(SCISSORS)){
+                result = LOSE;
             }
         }
 
         if (playerChoose.equals("s") || playerChoose.equals("scissors")){
-            if (computerChoose.equals(rock)){
-                result = lose;
-            }else if (computerChoose.equals(paper)){
-                result = win;
-            }else if (computerChoose.equals(scissors)){
-                result = draw;
+            if (computerChoose.equals(ROCK)){
+                result = LOSE;
+            }else if (computerChoose.equals(PAPER)){
+                result = WIN;
+            }else if (computerChoose.equals(SCISSORS)){
+                result = DRAW;
             }
         }
 
@@ -68,11 +68,11 @@ public class RockPaperScissors {
         String computerChoose = "";
 
         if (generateNumber == 1){
-            computerChoose = rock;
+            computerChoose = ROCK;
         }else if (generateNumber == 2){
-            computerChoose = paper;
+            computerChoose = PAPER;
         }else if (generateNumber == 3){
-            computerChoose = scissors;
+            computerChoose = SCISSORS;
         }
 
         return computerChoose;
@@ -80,11 +80,11 @@ public class RockPaperScissors {
 
     public static void printResult(String result){
 
-        if (result.equals(win)){
+        if (result.equals(WIN)){
             System.out.println("You win.");
-        }else if (result.equals(draw)){
+        }else if (result.equals(DRAW)){
             System.out.println("This game was a draw.");
-        }else if (result.equals(lose)){
+        }else if (result.equals(LOSE)){
             System.out.println("You lose.");
         }
     }
