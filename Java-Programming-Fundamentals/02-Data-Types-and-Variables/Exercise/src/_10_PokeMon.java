@@ -1,4 +1,3 @@
-import java.math.BigInteger;
 import java.util.Scanner;
 
 public class _10_PokeMon {
@@ -19,7 +18,9 @@ public class _10_PokeMon {
             countPokes++;
 
             if(powerN == startPowerN / 2){
-                powerN /= exhaustY;
+                if(exhaustY != 0){
+                    powerN /= exhaustY;
+                }
             }
 
         }
