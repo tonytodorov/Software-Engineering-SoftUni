@@ -18,6 +18,11 @@ public class _09_SpiceMustFlow {
         }
 
         totalSpice -= 26;
+
+        if(totalSpice < 0){
+            totalSpice = 0;
+        }
+
         System.out.printf("%d%n%d", countDays, totalSpice);
     }
 }
