@@ -7,26 +7,26 @@ public class _02_FromLeftToTheRight {
 
         int n = Integer.parseInt(scanner.nextLine());
 
-        double result;
+        int result;
 
         for (int i = 0; i < n; i++) {
             String text = scanner.nextLine();
 
             String[] part = text.split(" ");
-            double leftNumber = Double.parseDouble(part[0]);
-            double rightNumber = Double.parseDouble(part[1]);
+            long leftNumber = Long.parseLong(part[0]);
+            long rightNumber = Long.parseLong(part[1]);
 
-            if (leftNumber > rightNumber){
+            if(leftNumber > rightNumber){
                 result = sumDigits(leftNumber);
-            } else {
+            }else{
                 result = sumDigits(rightNumber);
             }
 
-            System.out.printf("%.0f%n", result);
+            System.out.println(result);
         }
     }
 
-    public static int sumDigits(double number){
+    public static int sumDigits(long number){
 
         int sum = 0;
 
