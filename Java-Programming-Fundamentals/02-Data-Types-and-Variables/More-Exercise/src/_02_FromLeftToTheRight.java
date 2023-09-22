@@ -7,6 +7,7 @@ public class _02_FromLeftToTheRight {
 
         int n = Integer.parseInt(scanner.nextLine());
 
+        int[] array = new int[n];
         int result;
 
         for (int i = 0; i < n; i++) {
@@ -16,13 +17,15 @@ public class _02_FromLeftToTheRight {
             long leftNumber = Long.parseLong(part[0]);
             long rightNumber = Long.parseLong(part[1]);
 
-            if(leftNumber > rightNumber){
-                result = sumDigits(leftNumber);
-            }else{
-                result = sumDigits(rightNumber);
-            }
+            long biggestNumber = Math.max(leftNumber, rightNumber);
+            long absValue = Math.abs(biggestNumber);
 
-            System.out.println(result);
+            result = sumDigits(absValue);
+            array[i] = result;
+        }
+
+        for (int num: array) {
+            System.out.println(num);
         }
     }
 
@@ -31,7 +34,7 @@ public class _02_FromLeftToTheRight {
         int sum = 0;
 
         while (number > 0){
-            double lastDigit = number % 10;
+            long lastDigit = number % 10;
             sum += lastDigit;
             number /= 10;
         }
