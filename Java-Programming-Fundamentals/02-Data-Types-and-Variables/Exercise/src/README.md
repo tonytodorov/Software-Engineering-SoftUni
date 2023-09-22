@@ -94,4 +94,56 @@ Print the total sum in the following format:
 | z      |        |
 | z      |        |
 
+## 5.	Print Part of the ASCII Table
+Find online more information about ASCII (American Standard Code for Information Interchange) and write a program that prints part of the ASCII table of characters at the console.  
+On the first line of input, you will receive the char index you should start with, and on the second line - the index of the last character you should print.
+
+### Examples
+
+| Input  | Output |   
+| ------ | ------ |
+|60      | < = > ? @ A |
+|65      |        |
+| Input  | Output |  
+| 69     | E F G H I J K L M N O|
+| 79      |        |
+| Input  | Output |  
+| 97     |a b c d e f g h|
+| 104      |        |
+| Input  | Output |  
+| 40     |( ) * + , - . / 0 1 2 3 4 5 6 7|
+| 55      |        |
+
+## 6.	Triples of Latin Letters
+
+Write a program to read an integer n and print all triples of the first n small Latin letters, ordered alphabetically:
+### Examples
+
+| Input  | Output |   
+| ------ | ------ |
+|3       |   aaa     |
+|        |   aab  |
+|        |   aac     |
+|        |   aba     |
+|        |   abb     |
+|        |   abc    |
+|        |   aca     |
+|        |   acb    |
+|        |   acc     |
+|        |   baa     |
+|        |   bab     |
+|        |   bac     |
+|        |   bba     |
+|        |   bbb     |
+|        |   bbc     |
+|        |   caa     |
+|        |   cab     |
+|        |   cac     |
+|        |   cba     |
+|        |   cbb     |
+|        |   cbc    |
+|        |   cca    |
+|        |   ccb    |
+|        |   ccc    |
+
 
