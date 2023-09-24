@@ -17,7 +17,8 @@ public class _01_EncryptSortAndPrintArray {
             for (int j = 0; j < text.length(); j++) {
                 char letter = text.charAt(j);
 
-                if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'){
+                if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u' ||
+                        letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U'){
                     sum += letter * text.length();
                 } else {
                     sum += letter / text.length();
