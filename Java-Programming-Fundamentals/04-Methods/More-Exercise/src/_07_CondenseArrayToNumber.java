@@ -14,6 +14,7 @@ public class _07_CondenseArrayToNumber {
         int[] temp = new int[numbers.length - 1];
 
         while (numbers.length - 1 > 0){
+
             for (int i = 0; i < temp.length; i++) {
                 temp[i] = numbers[i] + numbers[i + 1];
             }
