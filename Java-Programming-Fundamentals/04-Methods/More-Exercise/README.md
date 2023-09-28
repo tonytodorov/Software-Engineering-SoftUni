@@ -20,7 +20,7 @@ Print the result on the console.
 |  real  |  3.00    |
 |  2  |      |
 | Input  | Output |
-|  String  |  \$hello$    |
+|  String  |  `$hello$`   |
 |  hello  |      |
 
 
