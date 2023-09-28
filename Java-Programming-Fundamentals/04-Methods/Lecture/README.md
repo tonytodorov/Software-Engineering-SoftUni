@@ -35,7 +35,7 @@ Write a method that receives a grade between 2.00 and 6.00 and prints the corres
 | Input  | Output |  
 |  2.99       |    Fail |
 
-## 3.Printing Triangle
+## 3. Printing Triangle
 
 Create a method for printing triangles as shown below:
 
@@ -164,7 +164,7 @@ Create a method getMax() that returns the greater of the two values:
 |  Ivan        |         |
 |  Todor        |         |
 
-## 10.	Multiply Evens by Odds
+## 10. Multiply Evens by Odds
 
 Create a program that reads an integer number and multiplies the sum of all its even digits by the sum of all its odd digits:
 
