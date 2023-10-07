@@ -8,22 +8,21 @@ public class _08_FactorialDivision {
         int firstNum = Integer.parseInt(scanner.nextLine());
         int secondNum = Integer.parseInt(scanner.nextLine());
 
-        double result = divisibleNumber(firstNum, secondNum);
+        long factFirstNum = calculateFactorial(firstNum);
+        long factSecondNum = calculateFactorial(secondNum);
+
+        double result = 1.0 * factFirstNum / factSecondNum;
         System.out.printf("%.2f", result);
     }
 
-    public static int factorial(int num){
+    public static long calculateFactorial(int number){
 
-        int factorial = 1;
+        long factorial = 1;
 
-        for (int i = 1; i <= num; i++) {
+        for (int i = 1; i <= number; i++) {
             factorial *= i;
         }
 
         return factorial;
-    }
-
-    public static double divisibleNumber(int firstNum, int secondNum){
-        return 1.0 * factorial(firstNum) / factorial(secondNum);
     }
 }
