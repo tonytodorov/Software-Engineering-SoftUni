@@ -15,41 +15,29 @@ public class _05_BombNumbers {
 
         String[] bombPerformance = scanner.nextLine().split(" ");
 
-        int bombNumber = Integer.parseInt(bombPerformance[0]);
+        int bomb = Integer.parseInt(bombPerformance[0]);
         int bombPower = Integer.parseInt(bombPerformance[1]);
 
-        int bombIndex, bombIndexLeft, bombIndexRight;
-        int removeElements;
+        while (numbers.contains(bomb)) {
+            int index = numbers.indexOf(bomb);
+            int startIndex = Math.max(0, index - bombPower);
 
-        for (int i = 0; i < numbers.size(); i++) {
+            for (int i = startIndex; i < index; i++) {
+                numbers.remove(startIndex);
+            }
 
-            if(numbers.get(i).equals(bombNumber)) {
-                bombIndex = i;
-                bombIndexLeft = bombIndex - bombPower;
-                bombIndexRight = bombIndex + bombPower;
+            index = numbers.indexOf(bomb);
+            int endIndex = Math.min(index + bombPower, numbers.size() - 1);
 
-                if (bombIndexRight > numbers.size() - 1) {
-                    bombIndexRight = numbers.size() - 1;
-                }
-
-                if (bombIndexLeft < 0) {
-                    bombIndexLeft = 0;
-                }
-
-                removeElements = bombIndexRight - bombIndexLeft;
-                numbers.remove(bombIndex);
-
-                while (removeElements > 0) {
-                    numbers.remove(bombIndexLeft);
-                    removeElements--;
-                }
+            for (int i = index; i <= endIndex; i++) {
+                numbers.remove(index);
             }
         }
 
         int sum = 0;
 
-        for (int num: numbers) {
-            sum += num;
+        for (Integer number: numbers) {
+            sum += number;
         }
 
         System.out.println(sum);
