@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -13,12 +14,17 @@ public class _02_GaussTrick {
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
 
-        for (int i = 0; i < numbers.size() - i; i++) {
-            numbers.set(i, numbers.get(i) + numbers.get(numbers.size() - 1));
-            numbers.remove(numbers.size() - 1);
+        List<Integer> result = new ArrayList<>();
+
+        for (int i = 0; i < numbers.size() / 2; i++) {
+            result.add(numbers.get(i) + numbers.get(numbers.size() - 1 - i));
         }
 
-        for (int num: numbers) {
+        if (numbers.size() % 2 != 0) {
+            result.add(numbers.get((numbers.size() - 1) / 2));
+        }
+
+        for (int num: result) {
             System.out.printf("%d ", num);
         }
     }
