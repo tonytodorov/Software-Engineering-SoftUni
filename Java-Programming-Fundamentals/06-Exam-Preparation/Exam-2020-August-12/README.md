@@ -38,6 +38,7 @@ Total price: {total price with taxes}$
 |    2    |        |
 |    18.50    |        |
 |    16.86    |        |
+|    special    |        |
 | Input  | Output |
 |   1023     | Invalid price!   |
 |   15     |    Invalid price!    |
@@ -127,7 +128,6 @@ Then print this message on the console:
 | 1 0 | Sorry you lose :(       |
 | end |   4 4 5 5     |
 | Input  | Output |  
-| ------ | ------ |
 | a 2 4 a 2 4 |   Congrats! You have found matching elements - a!   |
 | 0 3 |    Congrats! You have found matching elements - 2!     |
 | 0 2 |  Congrats! You have found matching elements - 4!   |
@@ -135,7 +135,6 @@ Then print this message on the console:
 | 0 1 |    |
 | end |   |
 | Input  | Output |  
-| ------ | ------ |
 | a 2 4 a 2 4 |   Try again!   |
 | 4 0  |    Try again!     |
 | 0 2 |  Try again!   |
