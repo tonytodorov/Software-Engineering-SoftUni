@@ -102,9 +102,9 @@ Write a program to read a sequence of integers and find and print the top 5 numb
 
 | Input  | Output |   
 | ------ | ------ |
-|   10 20 30 40 50    |          |
+|   10 20 30 40 50    |     50 40     |
 | Input  | Output |
-|   5 2 3 4 -10 30 40 50 20 50 60 60 51    |        |
+|   5 2 3 4 -10 30 40 50 20 50 60 60 51    |   60 60 51 50 50     |
 | Input  | Output |
 |   1     |   No    |
 | Input  | Output |
