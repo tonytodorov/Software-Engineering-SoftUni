@@ -38,6 +38,7 @@ Total price: {total price with taxes}$
 |    2    |        |
 |    18.50    |        |
 |    16.86    |        |
+|    special    |        |
 | Input  | Output |
 |   1023     | Invalid price!   |
 |   15     |    Invalid price!    |
