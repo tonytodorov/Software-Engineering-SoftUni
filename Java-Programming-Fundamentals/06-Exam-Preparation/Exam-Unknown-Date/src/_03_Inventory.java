@@ -17,61 +17,41 @@ public class _03_Inventory {
         while (!command.equals("Craft!")) {
 
             String[] tokens = command.split(" - ");
-
             String operation = tokens[0];
             String item = tokens[1];
 
             if (operation.equals("Collect")) {
 
-                boolean isItemExist = false;
-
-                for (String str : items) {
-                    if (str.equals(item)) {
-                        isItemExist = true;
-                        break;
-                    }
-                }
+                boolean isItemExist = isItemExist(items, item);
 
                 if (!isItemExist) {
                     items.add(item);
                 }
-
             } else if (operation.equals("Drop")) {
 
-                for (int i = 0; i < items.size(); i++) {
-                    if (items.get(i).equals(item)) {
-                        items.remove(item);
-                        break;
-                    }
-                }
-            } else if (operation.equals("Combine Items")) {
-                String[] elements = item.split(":");
-                String oldItem = elements[0];
-                String newItem = elements[1];
-
-                int index = 0;
-                boolean isItemExist = false;
-
-                for (int i = 0; i < items.size(); i++) {
-                    if (items.get(i).equals(oldItem)) {
-                        isItemExist = true;
-                        index = i;
-                        break;
-                    }
-                }
+                boolean isItemExist = isItemExist(items, item);
 
                 if (isItemExist) {
-                    items.add(index, newItem);
+                    items.remove(item);
+                }
+            } else if (operation.equals("Combine Items")) {
+                String[] token = item.split(":");
+                String oldItem = token[0];
+                String newItem = token[1];
+
+                boolean isOldItemExist = isItemExist(items, oldItem);
+
+                if (isOldItemExist) {
+                    int oldItemIndex = itemIndex(items, oldItem);
+                    items.add(oldItemIndex + 1, newItem);
                 }
             } else if (operation.equals("Renew")) {
+                boolean isItemExist = isItemExist(items, item);
 
-                for (int i = 0; i < items.size(); i++) {
-                    if (items.get(i).equals(item)) {
-                        String temp = items.get(i);
-                        items.set(i, items.get(items.size() - 1));
-                        items.set(items.size() - 1, temp);
-                        break;
-                    }
+                if (isItemExist) {
+                    int itemIndex = itemIndex(items, item);
+                    items.add(item);
+                    items.remove(itemIndex);
                 }
             }
 
@@ -81,6 +61,30 @@ public class _03_Inventory {
         printList(items);
     }
 
+    public static boolean isItemExist(List<String> items, String item) {
+
+        for (String element : items) {
+            if (element.equals(item)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static int itemIndex(List<String> items, String item) {
+
+        int index = 0;
+
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).equals(item)) {
+                index = i;
+                break;
+            }
+        }
+
+        return index;
+    }
 
     public static void printList(List<String> items) {
 
