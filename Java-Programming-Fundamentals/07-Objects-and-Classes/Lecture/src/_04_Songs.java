@@ -16,6 +16,13 @@ public class _04_Songs {
             this.time = time;
         }
 
+        public String getTypeList() {
+            return this.typeList;
+        }
+
+        public String getName() {
+            return this.name;
+        }
     }
 
     public static void main(String[] args) {
@@ -43,12 +50,14 @@ public class _04_Songs {
 
         if (songType.equals("all")) {
             for (Song song : result) {
-                System.out.printf("%s%n", song.name);
+                System.out.println(song.getName());
             }
         } else {
             for (Song song : result) {
-                if (songType.equals(song.typeList)) {
-                    System.out.printf("%s%n", song.name);
+                String currentTypeList = song.getTypeList();
+
+                if (songType.equals(currentTypeList)) {
+                    System.out.println(song.getName());
                 }
             }
         }
