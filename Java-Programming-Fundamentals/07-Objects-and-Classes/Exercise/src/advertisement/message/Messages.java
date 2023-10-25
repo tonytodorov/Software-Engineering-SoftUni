@@ -1,4 +1,4 @@
-package advertisement;
+package advertisement.message;
 
 public class Messages {
     private String phrase;

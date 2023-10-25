@@ -1,4 +1,4 @@
-package vehicle;
+package vehicle.catalogue;
 
 public class Vehicle {
 

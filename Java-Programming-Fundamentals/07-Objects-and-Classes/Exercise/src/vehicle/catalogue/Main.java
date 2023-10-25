@@ -1,4 +1,4 @@
-package vehicle;
+package vehicle.catalogue;
 
 import java.util.ArrayList;
 import java.util.List;
