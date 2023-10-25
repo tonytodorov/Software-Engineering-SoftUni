@@ -1,34 +1,11 @@
+package students;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class _04_Students {
-
-    public static class Student {
-
-        String firstName;
-        String lastName;
-        double grade;
-
-        public Student(String firstName, String lastName, double grade) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.grade = grade;
-        }
-
-        public String getFirstName() {
-            return firstName;
-        }
-
-        public String getLastName() {
-            return lastName;
-        }
-
-        public double getGrade() {
-            return grade;
-        }
-    }
+public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

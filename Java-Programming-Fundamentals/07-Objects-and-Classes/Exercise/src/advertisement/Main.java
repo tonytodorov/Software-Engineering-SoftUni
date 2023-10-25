@@ -1,40 +1,11 @@
+package advertisement;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class _01_AdvertisementMessage {
-
-    public static class Messages {
-        String phrase;
-        String event;
-        String author;
-        String city;
-
-        public Messages(String phrase, String event, String author, String city) {
-            this.phrase = phrase;
-            this.event = event;
-            this.author = author;
-            this.city = city;
-        }
-
-        public String getPhrase() {
-            return phrase;
-        }
-
-        public String getEvent() {
-            return event;
-        }
-
-        public String getAuthor() {
-            return author;
-        }
-
-        public String getCity() {
-            return city;
-        }
-    }
-
+public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

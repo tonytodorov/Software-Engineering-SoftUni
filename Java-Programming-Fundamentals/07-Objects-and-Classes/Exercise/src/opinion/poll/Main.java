@@ -1,27 +1,10 @@
+package opinion.poll;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class _03_OpinionPoll {
-
-    public static class Person {
-
-        String name;
-        int age;
-
-        public Person(String name, int age) {
-            this.name = name;
-            this.age = age;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getAge() {
-            return age;
-        }
-    }
+public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
