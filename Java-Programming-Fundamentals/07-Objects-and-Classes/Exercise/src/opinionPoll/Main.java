@@ -1,4 +1,4 @@
-package opinion.poll;
+package opinionPoll;
 
 import java.util.ArrayList;
 import java.util.List;

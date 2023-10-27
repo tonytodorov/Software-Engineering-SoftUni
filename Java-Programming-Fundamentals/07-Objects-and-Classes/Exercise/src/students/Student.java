@@ -2,9 +2,9 @@ package students;
 
 public class Student {
 
-    String firstName;
-    String lastName;
-    double grade;
+    private String firstName;
+    private String lastName;
+    private double grade;
 
     public Student(String firstName, String lastName, double grade) {
         this.firstName = firstName;

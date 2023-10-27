@@ -1,11 +1,11 @@
-package vehicle.catalogue;
+package vehicleCatalogue;
 
 public class Vehicle {
 
-    String typeOfVehicle;
-    String model;
-    String color;
-    int horsepower;
+    private String typeOfVehicle;
+    private String model;
+    private String color;
+    private int horsepower;
 
     public Vehicle(String typeOfVehicle, String model, String color, int horsepower) {
         this.typeOfVehicle = typeOfVehicle;

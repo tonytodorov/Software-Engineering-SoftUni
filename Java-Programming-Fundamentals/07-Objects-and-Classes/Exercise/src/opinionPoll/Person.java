@@ -1,4 +1,4 @@
-package opinion.poll;
+package opinionPoll;
 
 public class Person {
 

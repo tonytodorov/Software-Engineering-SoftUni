@@ -1,4 +1,4 @@
-package student.v2;
+package studentV2;
 
 public class Student {
 

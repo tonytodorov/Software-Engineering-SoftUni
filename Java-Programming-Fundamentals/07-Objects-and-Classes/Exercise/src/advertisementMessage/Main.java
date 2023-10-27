@@ -1,4 +1,4 @@
-package advertisement.message;
+package advertisementMessage;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,10 +1,10 @@
-package student.v2;
+package studentV2;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class _06_StudentsV2 {
+public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

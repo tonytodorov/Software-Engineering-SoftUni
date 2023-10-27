@@ -1,4 +1,4 @@
-package order.by.age;
+package orderByAge;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

@@ -1,4 +1,4 @@
-package order.by.age;
+package orderByAge;
 
 public class People {
 

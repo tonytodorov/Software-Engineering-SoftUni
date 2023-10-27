@@ -2,9 +2,9 @@ package articles;
 
 public class Article {
 
-    String title;
-    String content;
-    String author;
+    private String title;
+    private String content;
+    private String author;
 
     public Article(String title, String content, String author) {
         this.title = title;
