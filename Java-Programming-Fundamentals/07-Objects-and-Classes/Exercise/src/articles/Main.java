@@ -11,9 +11,9 @@ public class Main {
 
         String[] articles = scanner.nextLine().split(", ");
 
-        String title =articles[0];
-        String content =articles[1];
-        String author =articles[2];
+        String title = articles[0];
+        String content = articles[1];
+        String author = articles[2];
 
         List<Article> articleList = new ArrayList<>();
         Article article = new Article(title, content, author);
