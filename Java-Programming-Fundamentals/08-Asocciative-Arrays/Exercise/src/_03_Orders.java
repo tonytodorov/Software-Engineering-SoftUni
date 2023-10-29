@@ -7,7 +7,7 @@ public class _03_Orders {
 
         String command = scanner.nextLine();
 
-        Map<String, Integer> orders = new LinkedHashMap<>();
+        Map<String, List<Double>> orders = new LinkedHashMap<>();
 
         while (!command.equals("buy")) {
 
@@ -15,22 +15,28 @@ public class _03_Orders {
 
             String product = data[0];
             double price = Double.parseDouble(data[1]);
-            int quantity = Integer.parseInt(data[2]);
+            double quantity = Double.parseDouble(data[2]);
 
             if (!orders.containsKey(product)) {
-                orders.put(product, quantity);
+                orders.put(product, new ArrayList<>());
+                orders.get(product).add(quantity);
+                orders.get(product).add(price);
             } else {
-                orders.replace(product, quantity);
+                orders.get(product).set(0, orders.get(product).get(0) + quantity);
+                orders.get(product).set(1, price);
             }
-
-
-
-
-            orders.put(product, orders.get(product));
 
             command = scanner.nextLine();
         }
 
+        for (Map.Entry<String, List<Double>> entry: orders.entrySet()) {
+            String key = entry.getKey();
 
+            double quantity = orders.get(key).get(0);
+            double price = orders.get(key).get(1);
+            double totalPrice = quantity * price;
+
+            System.out.printf("%s -> %.2f%n", key, totalPrice);
+        }
     }
 }
