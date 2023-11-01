@@ -1,4 +1,4 @@
-# More-Exercise: Lists
+# Lab: Objects and Classes
 
 ## 1. Randomize Words
 
