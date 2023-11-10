@@ -7,7 +7,7 @@ public class _01_MatchFullName {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String regex = "\\b([A-Z][a-z]{2,}) ([A-Z][a-z]{2,})\\b";
+        String regex = "\\b[A-Z][a-z]+ [A-Z][a-z]+\\b";
         String text = scanner.nextLine();
 
         Pattern pattern = Pattern.compile(regex);
