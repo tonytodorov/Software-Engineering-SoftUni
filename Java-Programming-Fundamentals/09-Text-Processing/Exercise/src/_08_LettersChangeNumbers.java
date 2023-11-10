@@ -20,12 +20,12 @@ public class _08_LettersChangeNumbers {
             currentText = currentText.replace(String.valueOf(firstLetter), "");
             currentText = currentText.replace(String.valueOf(lastLetter), "");
 
-            int number = Integer.parseInt(currentText);
+            double number = Double.parseDouble(currentText);
             int position;
 
             if (Character.isUpperCase(firstLetter)) {
                 position = letterPosition(firstLetter);
-                double divide = 1.0 * number / position;
+                double divide = number / position;
                 totalSum += divide;
             } else {
                 position = letterPosition(firstLetter);
