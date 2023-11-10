@@ -45,7 +45,6 @@ public class _08_LettersChangeNumbers {
         System.out.printf("%.2f", totalSum);
     }
 
-
     public static int letterPosition(char searchedLetter) {
 
         int position = 0;
