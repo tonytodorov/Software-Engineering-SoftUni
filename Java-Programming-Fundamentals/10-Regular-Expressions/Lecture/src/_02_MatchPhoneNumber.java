@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -14,8 +16,18 @@ public class _02_MatchPhoneNumber {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
 
+        List<String> result = new ArrayList<>();
+
         while (matcher.find()) {
-            System.out.print(matcher.group() + ", ");
+            result.add(matcher.group());
+        }
+
+        for (int i = 0; i < result.size(); i++) {
+            System.out.print(result.get(i));
+
+            if (i < result.size() - 1) {
+                System.out.print(", ");
+            }
         }
     }
 }
