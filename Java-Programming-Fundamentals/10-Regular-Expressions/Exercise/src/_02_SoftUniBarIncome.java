@@ -12,8 +12,10 @@ public class _02_SoftUniBarIncome {
         String command = scanner.nextLine();
         List<String> matches = new ArrayList<>();
 
-        Pattern pattern = Pattern.compile("(?<customer>\\%[A-Z]?[a-z]+\\%)(?<product>\\<\\w+\\>)([\\W\\w]*)" +
-                "(?<count>\\|[\\d]\\|)\\3(?<price>[\\d.]+\\$)");
+        Pattern pattern = Pattern.compile("%(?<customer>[A-Z][a-z]+)%[^\\$\\.\\%\\|0-9]*" +
+                "\\<(?<product>\\w+)\\>[^\\$\\.\\%\\|0-9]*\\|" +
+                "(?<count>[0-9]+)\\|([^\\$\\.\\%\\|0-9]*" +
+                "(?<price>[\\d.]+))\\$");
 
         double totalPrice = 0.00;
 

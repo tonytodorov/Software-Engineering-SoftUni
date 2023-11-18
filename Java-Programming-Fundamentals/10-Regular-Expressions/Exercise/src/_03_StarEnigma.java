@@ -55,10 +55,10 @@ public class _03_StarEnigma {
                                   TreeMap<String, String> attackedPlanets,
                                   TreeMap<String,String> destroyedPlanets) {
 
-        Pattern pattern = Pattern.compile("@(?<planetName>[\\w]+):" +
-                "(?<planetPopulation>[\\d]+)!" +
-                "(?<attackType>[AD]?)!->" +
-                "(?<soldierCount>[\\d]+)");
+        Pattern pattern = Pattern.compile("@(?<planetName>[A-Za-z]+)[^\\@\\-\\!\\:\\>]*:[^\\@\\-\\!\\:\\>0-9]*" +
+                "(?<planetPopulation>[\\d]+)[^\\@\\-\\!\\:\\>]*![^\\@\\-\\!\\:\\>]" +
+                "*(?<attackType>[AD])[^\\@\\-\\!\\:\\>]*![^\\@\\-\\!\\:\\>]*\\-\\>[^\\@" +
+                "\\-\\!\\:\\>0-9]*(?<soldierCount>[\\d]+)");
 
         for (String currentMessage : decryptedMessages) {
             Matcher matcher = pattern.matcher(currentMessage);
