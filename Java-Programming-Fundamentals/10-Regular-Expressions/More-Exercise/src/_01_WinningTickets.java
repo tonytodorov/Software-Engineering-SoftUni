@@ -7,7 +7,7 @@ public class _01_WinningTickets {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String[] text = scanner.nextLine().split("\\s+,+\\s+");
+        String[] text = scanner.nextLine().split("\\s+,\\s+");
 
         for (int i = 0; i < text.length; i++) {
             String currentText = text[i];
@@ -15,7 +15,7 @@ public class _01_WinningTickets {
             text[i] = currentText;
         }
 
-        Pattern checkLength = Pattern.compile(".{20}$");
+        Pattern checkLength = Pattern.compile(".{20}");
 
         for (String element : text) {
             Matcher matcher = checkLength.matcher(element);
@@ -34,10 +34,9 @@ public class _01_WinningTickets {
 
                 String sign = leftSigns.substring(0, 1);
 
-                if (leftSigns.length() >= 6
-                        && leftSigns.length() <= 9
-                        && rightSigns.length() >= 6
-                        && rightSigns.length() <= 9) {
+                if (leftSigns.length() == rightSigns.length()
+                        && leftSigns.length() >= 6
+                        && leftSigns.length() <= 9) {
                     System.out.printf("ticket \"%s\" - %s%s%n", element, leftSigns.length(), sign);
                 } else {
                     System.out.printf("ticket \"%s\" - %s%s Jackpot!%n", element, leftSigns.length(), sign);
@@ -52,11 +51,11 @@ public class _01_WinningTickets {
 
         String result = "";
 
-        Pattern pattern = Pattern.compile("(?<winSign>[@#$^]+)");
+        Pattern pattern = Pattern.compile("[@#$^]+");
         Matcher matcher = pattern.matcher(side);
 
         if (matcher.find()) {
-            result = matcher.group("winSign");
+            result = matcher.group();
         }
 
         return result;

@@ -16,7 +16,6 @@ public class _04_NetherRealms {
         }
     }
 
-
     public static int calculateDemonHealth(String currentPart) {
 
         int demonHealth = 0;
@@ -37,7 +36,7 @@ public class _04_NetherRealms {
 
     public static double calculateDamage(String currentPart) {
 
-        String[] numbers = currentPart.split("[A-Za-z]+|[*\\/]+");
+        String[] numbers = currentPart.split("[A-Za-z]+|[\\*]");
 
         double totalDamage = 0.00;
 
