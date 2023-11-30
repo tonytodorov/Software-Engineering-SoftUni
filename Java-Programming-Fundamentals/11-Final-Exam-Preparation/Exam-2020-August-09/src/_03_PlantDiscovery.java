@@ -14,10 +14,10 @@ public class _03_PlantDiscovery {
             String input = scanner.nextLine();
 
             String[] tokens = input.split("<->");
-            String key = tokens[0];
-            String value = tokens[1];
+            String plant = tokens[0];
+            String rarity = tokens[1];
 
-            plants.put(key, value);
+            plants.put(plant, rarity);
         }
 
         copyMap(plants, ratings);
