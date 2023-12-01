@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -7,57 +9,52 @@ public class _01_WinningTickets {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String[] text = scanner.nextLine().split("\\s+,\\s+");
+        String text = scanner.nextLine();
 
-        for (int i = 0; i < text.length; i++) {
-            String currentText = text[i];
-            currentText = currentText.replace(",", "");
-            text[i] = currentText;
+        Pattern pattern = Pattern.compile("[^\\s+,]+");
+        Matcher matcher = pattern.matcher(text);
+
+        List<String> lotteryTickets = new ArrayList<>();
+
+        while (matcher.find()) {
+            lotteryTickets.add(matcher.group());
         }
 
-        Pattern checkLength = Pattern.compile(".{20}");
 
-        for (String element : text) {
-            Matcher matcher = checkLength.matcher(element);
+        for (String currentTicket : lotteryTickets) {
 
-            if (matcher.find()) {
-                String leftSide = element.substring(0, 10);
-                String rightSide = element.substring(10, 20);
+            if (currentTicket.length() == 20) {
 
-                String leftSigns = getSigns(leftSide);
-                String rightSigns = getSigns(rightSide);
+                String leftSide = currentTicket.substring(0, 10);
+                String rightSide = currentTicket.substring(10, 20);
 
-                if (leftSigns.isEmpty()) {
-                    System.out.printf("ticket \"%s\" - no match", element);
-                    continue;
-                }
+                Pattern symbols = Pattern.compile("[@#$^]+");
+                Matcher matchLeft = symbols.matcher(leftSide);
+                Matcher matchRight = symbols.matcher(rightSide);
 
-                String sign = leftSigns.substring(0, 1);
+                if (matchLeft.find() && matchRight.find()) {
+                    String leftLength = matchLeft.group();
+                    String rightLength = matchRight.group();
 
-                if (leftSigns.length() == rightSigns.length()
-                        && leftSigns.length() >= 6
-                        && leftSigns.length() <= 9) {
-                    System.out.printf("ticket \"%s\" - %s%s%n", element, leftSigns.length(), sign);
+                    if (leftLength.length() != 10 && rightLength.length() != 10 &&
+                            leftLength.length() == rightLength.length()) {
+                        System.out.printf("ticket \"%s\" - %s%s%n",
+                                currentTicket,
+                                leftLength.length(),
+                                leftLength.charAt(0));
+                    } else {
+                        System.out.printf("ticket \"%s\" - %s%s Jackpot!%n",
+                                currentTicket,
+                                leftLength.length(),
+                                leftLength.charAt(0));
+                    }
                 } else {
-                    System.out.printf("ticket \"%s\" - %s%s Jackpot!%n", element, leftSigns.length(), sign);
+                    System.out.printf("ticket \"%s\" - no match%n", currentTicket);
                 }
+
             } else {
                 System.out.println("invalid ticket");
             }
         }
-    }
-
-    public static String getSigns(String side) {
-
-        String result = "";
-
-        Pattern pattern = Pattern.compile("[@#$^]+");
-        Matcher matcher = pattern.matcher(side);
-
-        if (matcher.find()) {
-            result = matcher.group();
-        }
-
-        return result;
     }
 }
