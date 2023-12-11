@@ -14,10 +14,17 @@ public class _01_ReverseNumbersWithStack {
 
         ArrayDeque<Integer> numbers = new ArrayDeque<>();
 
-        for (int num : input) {
+        for (Integer num : input) {
             numbers.push(num);
         }
 
+        for (int i = 0; i < numbers.size(); i++) {
+            int num = numbers.poll();
+            numbers.push(num);
+        }
 
+        for (Integer num: numbers) {
+            System.out.print(num + " ");
+        }
     }
 }
