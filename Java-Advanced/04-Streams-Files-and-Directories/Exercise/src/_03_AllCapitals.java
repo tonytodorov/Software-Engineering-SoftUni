@@ -5,7 +5,7 @@ public class _03_AllCapitals {
 
     public static void main(String[] args) throws IOException {
 
-        String path = "C:\\Users\\PC-TONY\\Desktop\\04. Java-Advanced-Files-and-Streams-Exercises-Resources\\input.txt";
+        String path = "C:\\Users\\User\\Desktop\\04. Java-Advanced-Files-and-Streams-Exercises-Resources\\input.txt";
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(path)));
 
         String line = bufferedReader.readLine();

@@ -5,9 +5,9 @@ public class _06_WordCount {
 
     public static void main(String[] args) throws IOException {
 
-        String wordsPath = "C:\\Users\\PC-TONY\\Desktop\\" +
+        String wordsPath = "C:\\Users\\User\\Desktop\\" +
                 "04. Java-Advanced-Files-and-Streams-Exercises-Resources\\words.txt";
-        String filePath = "C:\\Users\\PC-TONY\\Desktop\\" +
+        String filePath = "C:\\Users\\User\\Desktop\\" +
                 "04. Java-Advanced-Files-and-Streams-Exercises-Resources\\text.txt";
 
         Scanner readWords = new Scanner(new FileInputStream(wordsPath));
