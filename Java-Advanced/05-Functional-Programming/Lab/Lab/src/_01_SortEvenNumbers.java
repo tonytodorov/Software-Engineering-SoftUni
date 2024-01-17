@@ -20,8 +20,7 @@ public class _01_SortEvenNumbers {
 
         System.out.println(printNumbers(sorted));
     }
-
-
+    
     public static String printNumbers(List<Integer> numbers) {
         return numbers.stream()
                 .map(String::valueOf)
