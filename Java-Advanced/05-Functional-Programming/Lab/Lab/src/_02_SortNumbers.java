@@ -12,7 +12,7 @@ public class _02_SortNumbers {
                 .toArray();
 
         Function<int[], String> countNumbers = arr -> "Count = " + arr.length;
-        Function<int[], String> sumNumbers = arr -> "Sum =  " + Arrays.stream(numbers).sum();
+        Function<int[], String> sumNumbers = arr -> "Sum = " + Arrays.stream(numbers).sum();
 
         System.out.println(countNumbers.apply(numbers));
         System.out.println(sumNumbers.apply(numbers));
