@@ -36,6 +36,7 @@ Create a simple calculator that can evaluate simple expressions that will not ho
 
 Solve the problem using a Stack.
 
+### Examples
 | Input  | Output |
 | ------ | ------ |
 | 2 + 5 + 10 - 2 - 1        |   14      |
@@ -191,6 +192,6 @@ Each forward instruction visits the next most recent such URL. If normal navigat
 | https//google.bg/java/oop                             |           https//google.bg/java/oop                                |
 | back                             |     https//google.bg/java/advanced                                         |
 | https//google.bg/java/oop                            |                  https//google.bg/java/oop                          |
-| fHome                           |                                           |
+| Home                           |                                           |
 
 
