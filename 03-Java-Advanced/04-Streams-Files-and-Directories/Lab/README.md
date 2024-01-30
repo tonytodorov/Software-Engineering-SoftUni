@@ -32,8 +32,6 @@ Write every space or new line as it is, e.g., a space or a new line.
 Read the file provided, named "input.txt" and extracts all integers that are not a part of a word in a separate file. A valid integer is surrounded by white spaces.
 
 ### Examples
-
-### Examples
 | Input  | Output |   
 | ------ | ------ |
 | On January 1 , 1533 , Michael Angelo, then fifty-seven years old, writes ...	| 1 <br> 1533 <br> ... |
@@ -56,7 +54,6 @@ a youth of noble Roman family,    |      |
 ## 6.	Sort Lines
 Read the file provided, named "input.txt" and sort all lines. Write text to another text file. Use Path and Files Classes. 
 
-
 ### Examples
 
 | Input  | Output |   
@@ -72,7 +69,6 @@ You are provided a folder named "Files-and-Streams". Create a program that lists
 | Input  | Output |   
 | ------ | ------ |
 |       |   input.txt: [size in bytes] <br> output.txt: [size in bytes] |
-
 
 ## 8.	Nested Folders
 You are provided a folder named "Files-and-Streams". Create a program that lists the names of all directories in it (including all nested directories).
