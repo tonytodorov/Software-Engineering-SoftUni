@@ -131,7 +131,7 @@ The planets should be ordered by name alphabetically.
 
 
 
-# 4.	*Nether Realms
+## 4.	*Nether Realms
 A mighty battle is coming. In the stormy nether realms, demons fight against each other for supremacy in a duel from which only one will survive.
 
 Your job, however, is not so exciting. You must sign in all the participants in the nether realm's mighty battle's demon book. 
@@ -169,7 +169,7 @@ Print all demons, each on a separate line in the format:
 |  Gos/ho          |   Gos/ho - 512 health, 0.00 damage   |
 
 
-# 5.	*Extract Emails
+## 5.	*Extract Emails
 Write a program to extract all email addresses from a given text. The text comes at the only input line. Print the emails on the console, each at a separate line. Emails are considered to be in format <user>@<host>, where: 
 
 -	\<user\> is a sequence of letters and digits, where '.', '-' and '_' can appear between them.
@@ -185,7 +185,7 @@ Write a program to extract all email addresses from a given text. The text comes
 |                                        |    j.hopking@york.ac.uk                |
 
 
-# 6.	*Valid Password
+## 6.	*Valid Password
 Your first task is to determine if the given sequence of characters is a valid online banking password. 
 
 Each line must not contain anything else but a valid password. A password is valid when:
