@@ -61,6 +61,8 @@ When you receive "end of shift", print the total amount of money for the day rou
 -	After receiving "end of shift" print the total amount of money for the day rounded to 2 decimal places in the following format: "Total income: {income}".
 -	Allowed working time / memory: 100ms / 16MB.
 
+### Examples
+
 | Input  | Output |
 | ------ | ------ |
 | %George%<Croissant>\|2\|10.3$ |    George: Croissant - 20.60             |
