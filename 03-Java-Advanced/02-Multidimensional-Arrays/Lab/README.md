@@ -149,7 +149,7 @@ Write a program that reads a matrix from the console. Then print the diagonals. 
 |  1 2 1 4              |          |
 |  2 2 3 1             |            |
 
-## ** Find the Real Queen
+## 7. ** Find the Real Queen
 Write a program that reads (8 x 8) matrix of characters from the console. The matrix represents a chessboard with figures on it. The figures can be - queens as char 'q' or any other ASCII symbol. There will be more than one queen, but only one queen will have a valid position, which is not attacked by any other queen and does not attack any other queen. In another word, in the way of the valid queen, there are no other queens, but there may be any other ASCII symbol. Your task is to read the chessboard and find the position of the valid queen. According to chess rules, the queen can attack all the cells in horizontal verticals and both diagonals, which cross the queen position.
 
 
@@ -175,7 +175,7 @@ q q q 1 1 1 q q
 q q 1 q 1 q 1 q
 q 1 q q 1 q q 1  |   4 4       |
 
-##  Wrong Measurements
+## 8.  Wrong Measurements
 You will be given the rows of a matrix. Then the matrix itself. Inside this matrix, there are mistaken values that need to be replaced. You will receive the wrong value at the last line. Those values should be replaced with the sum of the nearest elements in the four directions, up, down, left, and right, but only if they are valid values. In the end, you have to print the fixed measurements. 
 
 ### Examples
