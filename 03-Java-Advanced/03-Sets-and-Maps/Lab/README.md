@@ -109,8 +109,6 @@ The game ends after 50 rounds or if any player loses all of his numbers.
 ## 4.	Count Real Numbers
 Write a program that counts the occurrence of real numbers. The input is a single line with real numbers separated by a space. Print the numbers in the order of appearance. All numbers must be formatted to one digit after the decimal point.
 
-## Input
-
 ### Examples
 
 | Input  | Output |   
@@ -207,7 +205,7 @@ Africa Egypt Cairo |            |
 Write a program that:
 <ul>
     <li>Reads from console number of students for a track.</li>
--	<li>Reads on pair of rows:</li>
+	<li>Reads on pair of rows:</li>
         <ul>
             <li>The first line is the name of the student.</li>
             <li>The second line is his score for a different number of courses.</li>
