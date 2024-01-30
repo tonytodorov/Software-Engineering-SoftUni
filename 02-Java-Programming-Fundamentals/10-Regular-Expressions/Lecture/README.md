@@ -1,6 +1,6 @@
 # Lab: Regular Expressions
 
-## 1.	1.	Match Full Name
+## 1.	Match Full Name
 Write a Java Program to match full names from a list of names and print them on the console.
 
 A valid full name has the following characteristics:
