@@ -22,18 +22,21 @@ public class _01_WormsAndHoles {
         int matches = 0;
 
         while (!worms.isEmpty() && !holes.isEmpty()) {
-            int stackElement = worms.peek();
-            int queueElement = holes.peek();
+            int worm = worms.peek();
+            int hole = holes.peek();
 
-            worms.pop();
-            holes.poll();
-
-            if (stackElement != queueElement) {
-                int decrease = stackElement - 3;
-                worms.push(decrease);
-            } else {
+            if (worm == hole) {
+                worms.pop();
+                holes.poll();
                 matches += 1;
+            } else {
+                worms.push(worms.pop() - 3);
+                if (worms.peek() <= 0) {
+                    worms.pop();
+                }
+                holes.poll();
             }
+
         }
 
         if (matches > 0) {
