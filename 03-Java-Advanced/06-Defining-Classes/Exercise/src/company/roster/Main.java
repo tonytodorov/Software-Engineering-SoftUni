@@ -4,7 +4,7 @@ import java.util.*;
 
 import static java.util.stream.Collectors.groupingBy;
 
-public class MainEmployee {
+public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
