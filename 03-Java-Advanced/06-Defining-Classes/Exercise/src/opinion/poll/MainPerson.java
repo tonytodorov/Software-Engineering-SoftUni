@@ -9,19 +9,20 @@ public class MainPerson {
 
         int n = Integer.parseInt(scanner.nextLine());
 
-        Map<String, Integer> persons = new TreeMap<>();
+        List<Person> personList = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
             String[] data = scanner.nextLine().split("\\s+");
             Person person = new Person(data[0], Integer.parseInt(data[1]));
 
-            if (person.getAge() > 30) {
-                persons.putIfAbsent(person.getName(), person.getAge());
-            }
+            personList.add(person);
         }
 
-        for (Map.Entry<String, Integer> entry: persons.entrySet()) {
-            System.out.printf("%s - %d%n", entry.getKey(), entry.getValue());
-        }
+        personList.stream()
+                .filter(person -> person.getAge() > 30)
+                .sorted((p1, p2) -> p1.getName().compareTo(p2.getName()))
+                .forEach(System.out::println);
+
     }
 }
+
