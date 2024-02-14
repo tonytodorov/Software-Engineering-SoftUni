@@ -1,7 +1,9 @@
 package fishingPond;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Pond {
 
@@ -13,62 +15,40 @@ public class Pond {
     }
 
     public void addFish(Fish fish) {
-        if (fishes.size() <= capacity) {
+        if (this.fishes.size() < this.capacity) {
             fishes.add(fish);
         }
     }
 
     public boolean removeFish(String species) {
-        for (Fish fish: fishes) {
-            if (fish.getSpecies().equals(species)) {
-                fishes.remove(fish);
-                return true;
-            }
-        }
-
-        return false;
+        return this.fishes.removeIf(fish -> fish.getSpecies().equals(species));
     }
 
-    public String getOldestFish() {
-        int oldestFish = Integer.MIN_VALUE;
-        String fishName = "";
-
-        for (Fish fish : fishes) {
-            int currentFishAge = fish.getAge();
-
-            if (currentFishAge > oldestFish) {
-                oldestFish = currentFishAge;
-                fishName = fish.getSpecies();
-            }
-        }
-
-        return fishName;
+    public Fish getOldestFish() {
+        return this.fishes.stream()
+                .max(Comparator.comparing(Fish::getAge))
+                .orElse(null);
     }
 
-    public String getFish(String species) {
-        for (Fish fish: fishes) {
-            if (fish.getSpecies().equals(species)) {
-                return fish.getSpecies() + " " + fish.getAge() + " " + fish.getMatingSeason();
-            }
-        }
-
-        return "";
+    public Fish getFish(String species) {
+        return this.fishes.stream()
+                .filter(fish -> fish.getSpecies().equals(species))
+                .findFirst()
+                .orElse(null);
     }
 
     public int getCount() {
-        return fishes.size();
+        return this.fishes.size();
     }
 
     public int getVacancies() {
-        return capacity - fishes.size();
+        return this.capacity - this.fishes.size();
     }
 
-    public void report() {
-        System.out.println("Fishes in the pond:");
-
-        for (Fish fish: fishes) {
-            System.out.printf("This %s is %d years old and reproduces through %s.%n",
-                    fish.getSpecies(), fish.getAge(), fish.getMatingSeason());
-        }
+    public String report() {
+        return String.format("Fishes in the pond: %n%s",
+                this.fishes.stream()
+                        .map(String::valueOf)
+                        .collect(Collectors.joining(System.lineSeparator())));
     }
 }

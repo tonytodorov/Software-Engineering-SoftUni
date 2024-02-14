@@ -37,6 +37,6 @@ public class Main {
         System.out.println(pond.getVacancies());
 
         // Report
-        pond.report();
+        System.out.println(pond.report());
     }
 }

@@ -35,4 +35,9 @@ public class Fish {
     public void setMatingSeason(String matingSeason) {
         this.matingSeason = matingSeason;
     }
+
+    @Override
+    public String toString() {
+        return String.format("This %s is %d years old and reproduces through %s.", this.species, this.age, this.matingSeason);
+    }
 }

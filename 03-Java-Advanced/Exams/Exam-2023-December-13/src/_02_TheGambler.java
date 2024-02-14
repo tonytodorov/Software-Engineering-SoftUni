@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class _02_TheGambler {
@@ -46,13 +45,11 @@ public class _02_TheGambler {
                 startCol += 1;
             }
 
-
             if (startRow < 0 || startRow > matrix.length
                     || startCol < 0 || startCol > matrix.length) {
                 isIndexOrAmountInvalid = true;
                 break;
             }
-
 
             if (matrix[startRow][startCol].equals("W")) {
                 totalAmount += 100;
@@ -64,7 +61,6 @@ public class _02_TheGambler {
                 isJackpotWin = true;
                 break;
             }
-
 
             if (totalAmount <= 0) {
                 isIndexOrAmountInvalid = true;
