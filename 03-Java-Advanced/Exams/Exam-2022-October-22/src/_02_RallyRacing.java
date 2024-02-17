@@ -1,5 +1,3 @@
-package shelter;
-
 import java.util.Scanner;
 
 public class _02_RallyRacing {
