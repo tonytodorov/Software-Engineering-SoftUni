@@ -12,5 +12,14 @@ public class _01_RecursiveArraySum {
                 .toArray();
 
 
+        System.out.println(sum(numbers, numbers.length - 1));
+    }
+
+    private static int sum(int[] numbers, int index) {
+        if (index == 0) {
+            return 1;
+        }
+
+        return sum(numbers, index) + sum(numbers, index - 1);
     }
 }
