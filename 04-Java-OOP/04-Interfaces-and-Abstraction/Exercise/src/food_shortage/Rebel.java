@@ -1,28 +1,18 @@
 //package food_shortage;
 
-public class Citizen implements Person, Identifiable, Buyer {
+public class Rebel implements Person, Buyer {
 
     private String name;
     private int age;
-    private String id;
-    private String birthDate;
+    private String group;
     private int food;
 
-    public Citizen(String name, int age, String id, String birthDate) {
+
+    public Rebel(String name, int age, String group) {
         this.name = name;
         this.age = age;
-        this.id = id;
-        this.birthDate = birthDate;
+        this.group = group;
         this.food = 0;
-    }
-
-    public String getBirthDate() {
-        return birthDate;
-    }
-
-    @Override
-    public String getId() {
-        return id;
     }
 
     @Override
@@ -35,13 +25,18 @@ public class Citizen implements Person, Identifiable, Buyer {
         return age;
     }
 
+    public String getGroup() {
+        return group;
+    }
+
     @Override
     public void buyFood() {
-        this.food += 10;
+        this.food += 5;
     }
 
     @Override
     public int getFood() {
         return food;
     }
+
 }
