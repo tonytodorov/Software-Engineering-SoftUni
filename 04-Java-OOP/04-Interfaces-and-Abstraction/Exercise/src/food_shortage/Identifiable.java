@@ -1,4 +1,4 @@
-//package food_shortage;
+package food_shortage;
 
 public interface Identifiable {
 

@@ -1,4 +1,4 @@
-//package food_shortage;
+package food_shortage;
 
 public class Rebel implements Person, Buyer {
 
