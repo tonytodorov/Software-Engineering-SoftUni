@@ -2,7 +2,6 @@ package football_team_generator;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Team {
 
@@ -10,7 +9,7 @@ public class Team {
     private List<Player> players;
 
     public Team(String name) {
-        this.name = name;
+        setName(name);
         this.players = new ArrayList<>();
     }
 
@@ -19,7 +18,7 @@ public class Team {
     }
 
     private void setName(String name) {
-        if (null == name || name.isEmpty()) {
+        if (null == name || name.trim().isEmpty()) {
             throw new IllegalArgumentException("A name should not be empty");
         }
 
@@ -27,31 +26,21 @@ public class Team {
     }
 
     public void addPlayer(Player player) {
-        if (!players.contains(player)) {
-            players.add(player);
-        }
+        players.add(player);
     }
 
     public void removePlayer(String name) {
-        Player currentPlayer = this.players.stream()
-                .filter(player -> player.getName().equals(name))
-                .findFirst()
-                .orElse(null);
+        boolean isRemoved = players.removeIf(player -> player.getName().equals(name));
 
-        if (null != currentPlayer) {
-            players.remove(currentPlayer);
-        } else {
-            System.out.printf("Player %s is not in %s team.%n", name, getName());
+        if (!isRemoved) {
+            throw new IllegalArgumentException(String.format("Player %s is not in %s team.", name, this.name));
         }
     }
 
     public double getRating() {
-        List<Double> collect = this.players.stream()
-                .map(Player::overallSkillLevel)
-                .collect(Collectors.toList());
-
-        // TODO
-
-        return 0;
+        return players.stream()
+                .mapToDouble(Player::overallSkillLevel)
+                .average()
+                .orElse(0);
     }
 }

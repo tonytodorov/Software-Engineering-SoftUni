@@ -10,12 +10,12 @@ public class Player {
     private int shooting;
 
     public Player(String name, int endurance, int sprint, int dribble, int passing, int shooting) {
-        this.name = name;
-        this.endurance = endurance;
-        this.sprint = sprint;
-        this.dribble = dribble;
-        this.passing = passing;
-        this.shooting = shooting;
+        setName(name);
+        setEndurance(endurance);
+        setSprint(sprint);
+        setDribble(dribble);
+        setPassing(passing);
+        setShooting(shooting);
     }
 
     public String getName() {
@@ -23,46 +23,35 @@ public class Player {
     }
 
     private void setName(String name) {
+        if (null == name || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("A name should not be empty");
+        }
+
         this.name = name;
     }
 
     private void setEndurance(int endurance) {
-        if (!validateStat(endurance)) {
-            throw new IllegalArgumentException("Endurance should be between 0 and 100.");
-        }
-
+        checkStat(endurance, "Endurance");
         this.endurance = endurance;
     }
 
     private void setSprint(int sprint) {
-        if (!validateStat(sprint)) {
-            throw new IllegalArgumentException("Sprint should be between 0 and 100.");
-        }
-
+        checkStat(sprint, "Sprint");
         this.sprint = sprint;
     }
 
     private void setDribble(int dribble) {
-        if (!validateStat(dribble)) {
-            throw new IllegalArgumentException("Dribble should be between 0 and 100.");
-        }
-
+        checkStat(dribble, "Dribble");
         this.dribble = dribble;
     }
 
     private void setPassing(int passing) {
-        if (!validateStat(passing)) {
-            throw new IllegalArgumentException("Passing should be between 0 and 100.");
-        }
-
+        checkStat(passing, "Passing");
         this.passing = passing;
     }
 
     private void setShooting(int shooting) {
-        if (!validateStat(shooting)) {
-            throw new IllegalArgumentException("Shooting should be between 0 and 100.");
-        }
-
+        checkStat(shooting, "Shooting");
         this.shooting = shooting;
     }
 
@@ -70,7 +59,9 @@ public class Player {
         return (this.endurance + this.sprint + this.dribble + this.passing + this.shooting) / 5.00;
     }
 
-    private boolean validateStat(int stat) {
-        return stat >= 0 && stat <= 100;
+    private void checkStat(int stat, String statType) {
+        if (stat < 0 || stat > 100) {
+            throw new IllegalArgumentException(String.format("%s should be between 0 and 100.", statType));
+        }
     }
 }
