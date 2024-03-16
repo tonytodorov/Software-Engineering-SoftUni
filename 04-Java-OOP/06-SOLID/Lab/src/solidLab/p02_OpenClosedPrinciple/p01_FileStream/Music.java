@@ -1,0 +1,48 @@
+package solidLab.p02_OpenClosedPrinciple.p01_FileStream;
+
+public class Music {
+
+    private int length;
+    private int sent;
+    private String Artist;
+    private String Album;
+
+    public Music(int length, int sent, String artist, String album) {
+        this.length = length;
+        this.sent = sent;
+        this.Artist = artist;
+        this.Album = album;
+    }
+
+    public int getLength() {
+        return this.length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getSent() {
+        return this.sent;
+    }
+
+    public void setSent(int sent) {
+        this.sent = sent;
+    }
+
+    public String getArtist() {
+        return this.Artist;
+    }
+
+    public void setArtist(String artist) {
+        Artist = artist;
+    }
+
+    public String getAlbum() {
+        return this.Album;
+    }
+
+    public void setAlbum(String album) {
+        Album = album;
+    }
+}
