@@ -18,6 +18,7 @@ public class UnitFactoryImpl implements UnitFactory {
 
 		Class clazz = Class.forName(unitClass);
 		Constructor<Unit> declaredConstructor = clazz.getDeclaredConstructor();
+		declaredConstructor.setAccessible(true);
 
 		return declaredConstructor.newInstance();
 	}

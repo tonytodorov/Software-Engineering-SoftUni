@@ -4,6 +4,7 @@ import barracksWars.interfaces.Repository;
 import barracksWars.interfaces.Unit;
 
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.TreeMap;
 
 public class UnitRepository implements Repository {
@@ -38,12 +39,12 @@ public class UnitRepository implements Repository {
 	}
 
 	public void removeUnit(String unitType) {
-		Integer remove = this.amountOfUnits.remove(unitType);
+		Integer remove = this.amountOfUnits.get(unitType);
 
-		if (remove == null) {
-			System.out.println("No such units in repository.");
+		if (null == remove || remove == 0) {
+			throw new NoSuchElementException("No such units in repository.");
 		} else {
-			System.out.println(unitType + "retired!");
+			this.amountOfUnits.put(unitType, --remove);
 		}
 	}
 }
