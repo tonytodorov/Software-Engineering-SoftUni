@@ -7,9 +7,14 @@ public class _02_SquareRoot {
 
         try {
             int number = Integer.parseInt(scanner.nextLine());
-            System.out.printf("%.2f%n", Math.sqrt(number));
+
+            if (number > 0) {
+                System.out.printf("%.2f%n", Math.sqrt(number));
+            } else {
+                System.out.println("Invalid");
+            }
         } catch (NumberFormatException e) {
-            System.out.println("Invalid number");
+            System.out.println("Invalid");
         } finally {
             System.out.println("Goodbye");
         }
