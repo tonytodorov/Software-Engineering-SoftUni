@@ -1,48 +1,28 @@
 package org.rpg_lab;
 
+import org.junit.Assert;
+import org.junit.Test;
+import org.mockito.Mockito;
+
+import static org.junit.Assert.*;
+
 public class HeroTest {
 
+    private static final int TARGET_XP = 10;
+    private static final String HERO_NAME = "Axus";
+
+    @Test
     public void test_HeroShouldGainXp_WhenTargetDie() {
-        Target fakeTarget = new Target() {
-            @Override
-            public int getHealth() {
-                return 0;
-            }
 
-            @Override
-            public void takeAttack(int attackPoints) {
+        Weapon weapon = Mockito.mock(Weapon.class);
+        Target target = Mockito.mock(Target.class);
 
-            }
+        Mockito.when(target.isDead()).thenReturn(true);
+        Mockito.when(target.giveExperience()).thenReturn(TARGET_XP);
 
-            @Override
-            public int giveExperience() {
-                return 0;
-            }
+        Hero hero = new Hero(HERO_NAME, weapon);
+        hero.attack(target);
 
-            @Override
-            public boolean isDead() {
-                return false;
-            }
-        };
-
-        Weapon weapon = new Weapon() {
-            @Override
-            public int getAttackPoints() {
-                return 0;
-            }
-
-            @Override
-            public int getDurabilityPoints() {
-                return 0;
-            }
-
-            @Override
-            public void attack(Target target) {
-
-            }
-        };
-
-
+        assertEquals(TARGET_XP, hero.getExperience());
     }
-
 }

@@ -26,7 +26,7 @@ public class Hero {
         return this.weapon;
     }
 
-    public void attack(Dummy target) {
+    public void attack(Target target) {
         this.weapon.attack(target);
 
         if (target.isDead()) {
