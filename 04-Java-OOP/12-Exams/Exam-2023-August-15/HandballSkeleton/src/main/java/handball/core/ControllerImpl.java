@@ -71,15 +71,16 @@ public class ControllerImpl implements Controller {
 
         if (null == byType) {
             throw new IllegalArgumentException(String.format(NO_EQUIPMENT_FOUND, equipmentType));
-        } else {
-            equipment.remove(byType);
-            Gameplay currentGameplay = gameplays.stream()
-                    .filter(gameplay -> gameplay.getName().equals(gameplayName))
-                    .findFirst()
-                    .get();
-
-            currentGameplay.addEquipment(byType);
         }
+
+        equipment.remove(byType);
+
+        Gameplay currentGameplay = gameplays.stream()
+                .filter(gameplay -> gameplay.getName().equals(gameplayName))
+                .findFirst()
+                .get();
+
+        currentGameplay.addEquipment(byType);
 
 
         return String.format(SUCCESSFULLY_ADDED_EQUIPMENT_IN_GAMEPLAY, equipmentType, gameplayName);

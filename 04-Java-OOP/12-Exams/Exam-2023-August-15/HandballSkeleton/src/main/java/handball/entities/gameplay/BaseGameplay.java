@@ -78,22 +78,19 @@ public abstract class BaseGameplay implements Gameplay {
     @Override
     public String toString() {
 
-        StringBuilder sb = new StringBuilder();
+        String teamInfo = "Team: " + ((teams.isEmpty())
+                ? "none"
+                : teams.stream().map(Team::getName).collect(Collectors.joining(" ")));
 
-        sb.append(getName())
-                .append(" ")
-                .append(this.getClass().getSimpleName())
-                .append(System.lineSeparator());
 
-        sb.append(teams.isEmpty() ? "Team: none" : "Team:");
-
-        teams.forEach(team -> sb.append(" ").append(team.getName()));
-        sb.append(System.lineSeparator());
-
-        sb.append("Equipment: ").append(equipments.size()).append(" ");
-        sb.append("Protection: ").append(allProtection());
-
-        return sb.toString();
+        return String.format("%s %s%n" +
+                "%s%n" +
+                "Equipment: %d, Protection: %d",
+                this.name,
+                this.getClass().getSimpleName(),
+                teamInfo,
+                this.equipments.size(),
+                allProtection());
     }
 
 
