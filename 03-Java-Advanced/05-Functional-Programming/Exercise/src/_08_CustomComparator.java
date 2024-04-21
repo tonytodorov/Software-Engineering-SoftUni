@@ -1,8 +1,6 @@
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class _08_CustomComparator {
@@ -15,22 +13,14 @@ public class _08_CustomComparator {
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
 
-        Predicate<Integer> evenNumbers = v -> v % 2 == 0;
-        Predicate<Integer> oddNumbers = v -> v % 2 != 0;
+        numbers.stream()
+                .filter(num -> num % 2 == 0)
+                .sorted()
+                .forEach(num -> System.out.print(num + " "));
 
-        List<Integer> even = numbers.stream()
-                .filter(evenNumbers)
-                .collect(Collectors.toList());
-
-        List<Integer> odd = numbers.stream()
-                .filter(oddNumbers)
-                .collect(Collectors.toList());
-
-        Collections.sort(even);
-        Collections.sort(odd);
-
-        even.forEach(v -> System.out.print(v + " "));
-        odd.forEach(v -> System.out.print(v + " "));
+        numbers.stream()
+                .filter(num -> num % 2 != 0)
+                .sorted()
+                .forEach(num -> System.out.print(num + " "));
     }
-
 }

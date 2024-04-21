@@ -19,11 +19,8 @@ public class _05_ReverseAndExclude {
 
         int divider = Integer.parseInt(scanner.nextLine());
 
-        Predicate<Integer> isDivisible = n -> n % divider != 0;
-        Consumer<Integer> printer = v -> System.out.printf("%d ", v);
-
         numbers.stream()
-                .filter(isDivisible)
-                .forEach(printer);
+                .filter(num -> num % divider != 0)
+                .forEach(num -> System.out.print(num + " "));
     }
 }

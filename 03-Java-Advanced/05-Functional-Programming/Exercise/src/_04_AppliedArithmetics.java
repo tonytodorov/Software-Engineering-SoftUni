@@ -19,13 +19,14 @@ public class _04_AppliedArithmetics {
 
         while (!"end".equals(input)) {
             if ("add".equals(input)) {
-                numbers = numbers.stream().map(num -> num + 1).toList();
+                numbers = numbers.stream().map(num -> num + 1).collect(Collectors.toList());
             } else if ("multiply".equals(input)) {
-                numbers = numbers.stream().map(num -> num * 2).toList();
+                numbers = numbers.stream().map(num -> num * 2).collect(Collectors.toList());
             } else if ("subtract".equals(input)) {
-                numbers = numbers.stream().map(num -> num - 1).toList();
+                numbers = numbers.stream().map(num -> num - 1).collect(Collectors.toList());
             } else {
-                numbers.forEach(System.out::println);
+                numbers.forEach(num -> System.out.print(num + " "));
+                System.out.println();
             }
 
             input = scanner.nextLine();
