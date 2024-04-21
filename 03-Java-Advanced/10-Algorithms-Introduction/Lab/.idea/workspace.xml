@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eca1452a-eb82-4343-8579-e433cdeae34f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../09-Iterators-and-Comparators/Exercise/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-Iterators-and-Comparators/Exercise/src/listy/iterator/ListyIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../09-Iterators-and-Comparators/Exercise/src/listy/iterator/ListyIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-Iterators-and-Comparators/Exercise/src/listy/iterator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../09-Iterators-and-Comparators/Exercise/src/listy/iterator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_01_RecursiveArraySum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_01_RecursiveArraySum.java" afterDir="false" />
     </list>
@@ -20,17 +24,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2cPkKkGTqv95x2BaUbaAJHWN3lm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-  </component>
-  <component name="RunManager" selected="Application._06_QuickSort">
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Software University/Software-Engineering-SoftUni/03-Java-Advanced/10-Algorithms-Introduction/Lab"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application._02_RecursiveFactorial">
     <configuration name="_01_RecursiveArraySum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_01_RecursiveArraySum" />
       <module name="Lab" />
@@ -68,11 +78,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application._02_RecursiveFactorial" />
+        <item itemvalue="Application._01_RecursiveArraySum" />
         <item itemvalue="Application._06_QuickSort" />
         <item itemvalue="Application._07_BinarySearch" />
         <item itemvalue="Application._05_MergeSort" />
-        <item itemvalue="Application._01_RecursiveArraySum" />
-        <item itemvalue="Application._02_RecursiveFactorial" />
       </list>
     </recent_temporary>
   </component>
@@ -88,6 +98,15 @@
     <servers />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_01_RecursiveArraySum.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="arr" />
