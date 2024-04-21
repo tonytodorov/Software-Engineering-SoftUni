@@ -19,17 +19,13 @@ public class _04_AppliedArithmetics {
 
         while (!"end".equals(input)) {
             if ("add".equals(input)) {
-                Function<Integer, Integer> add = v -> v + 1;
-                numbers.replaceAll(add::apply);
+                numbers = numbers.stream().map(num -> num + 1).toList();
             } else if ("multiply".equals(input)) {
-                Function<Integer, Integer> multiply = v -> v * 2;
-                numbers.replaceAll(multiply::apply);
+                numbers = numbers.stream().map(num -> num * 2).toList();
             } else if ("subtract".equals(input)) {
-                Function<Integer, Integer> subtract = v -> v - 1;
-                numbers.replaceAll(subtract::apply);
+                numbers = numbers.stream().map(num -> num - 1).toList();
             } else {
-                Consumer<Integer> printer = v -> System.out.printf("%d ", v);
-                numbers.forEach(printer);
+                numbers.forEach(System.out::println);
             }
 
             input = scanner.nextLine();
