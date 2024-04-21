@@ -75,8 +75,10 @@ Create a generic data structure that can store any type that can be compared. Im
 -	void swap(int index, int index)
 -	int countGreaterThan(T element)
 -	T getMax()
---	T getMin()
+-	T getMin()
+
 Create a command interpreter that reads commands and modifies the custom list that you have created. Implement the commands:
+
 -	Add {element} - Adds the given element to the end of the list.
 -	Remove {index} - Removes the element at the given index.
 -	Contains {element} - Prints if the list contains the given element (true or false).
@@ -92,7 +94,7 @@ Create a command interpreter that reads commands and modifies the custom list th
 | Input  | Output |   
 | ------ | ------ |
 | Add aa <br> Add bb <br> Add cc <br> Max <br> Min <br> Greater aa <br> Swap 0 2 <br> Contains aa <br> Print <br> END | cc <br> aa <br> 2 <br> true <br> cc <br> bb <br> aa |
-| Add Peter <br> Add George<br>Swap 0 0<br>Swap 1 <br>Swap 0 1<br>Swap 1 0<br>Swap 0 1<br>Print<br>END | George <br> Peter  |
+| Add Peter <br> Add George<br>Swap 0 0<br>Swap 1 1 <br>Swap 0 1<br>Swap 1 0<br>Swap 0 1<br>Print<br>END | George <br> Peter  |
 
 
 ## 8.	Custom List Sorter
