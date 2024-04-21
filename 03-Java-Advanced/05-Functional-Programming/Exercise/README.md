@@ -36,17 +36,9 @@ On the first line, you are given a list of numbers. On the next lines you are pa
 ### Examples
 | Input  | Output |   
 | ------ | ------ |
-|1 2 3 4 5 |  3 4 5 6 7  |
-add
-add
-print
-end |      |
+|1 2 3 4 5 <br> add <br> add <br>print <br> end |  3 4 5 6 7  |
 | Input  | Output |     
-| 5 10   | 9 19       |
-multiply
-subtract
-print
-end |          |
+| 5 10   <br> multiply <br> subtract <br> print <br> end | 9 19          |
 
 ## 5.	Reverse and Exclude
 Write a program that reverses a collection and removes elements that are divisible by a given integer n. 
