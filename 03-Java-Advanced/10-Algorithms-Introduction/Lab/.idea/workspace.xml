@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="eca1452a-eb82-4343-8579-e433cdeae34f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../09-Iterators-and-Comparators/Exercise/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../09-Iterators-and-Comparators/Exercise/src/listy/iterator/ListyIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../09-Iterators-and-Comparators/Exercise/src/listy/iterator/ListyIterator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../09-Iterators-and-Comparators/Exercise/src/listy/iterator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../09-Iterators-and-Comparators/Exercise/src/listy/iterator/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_01_RecursiveArraySum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_01_RecursiveArraySum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +40,7 @@
     "last_opened_file_path": "D:/Software University/Software-Engineering-SoftUni/03-Java-Advanced/10-Algorithms-Introduction/Lab"
   }
 }]]></component>
-  <component name="RunManager" selected="Application._02_RecursiveFactorial">
+  <component name="RunManager" selected="Application._05_MergeSort">
     <configuration name="_01_RecursiveArraySum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_01_RecursiveArraySum" />
       <module name="Lab" />
@@ -78,11 +78,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application._05_MergeSort" />
         <item itemvalue="Application._02_RecursiveFactorial" />
         <item itemvalue="Application._01_RecursiveArraySum" />
         <item itemvalue="Application._06_QuickSort" />
         <item itemvalue="Application._07_BinarySearch" />
-        <item itemvalue="Application._05_MergeSort" />
       </list>
     </recent_temporary>
   </component>
@@ -101,9 +101,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/_01_RecursiveArraySum.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/_05_MergeSort.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
