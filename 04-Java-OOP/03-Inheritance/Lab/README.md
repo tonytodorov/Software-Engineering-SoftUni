@@ -38,7 +38,7 @@ Add an additional function that returns and removes a random element from the li
 
 Create a class StackOfStrings that can store only strings and has the following functionality:
 
-- Private field: data: ArrayList<String>
+- Private field: data: ArrayList&lt;String&gt;
 - Public method: push(String item): void
 - Public method: pop(): String
 - Public method: peek(): String
