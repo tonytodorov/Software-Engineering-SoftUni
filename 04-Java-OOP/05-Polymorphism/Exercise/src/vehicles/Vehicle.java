@@ -1,32 +1,40 @@
 package vehicles;
 
+import java.text.DecimalFormat;
+
 public abstract class Vehicle {
 
     private double fuelQuantity;
     private double fuelConsumption;
 
-    public Vehicle(double fuelQuantity, double fuelConsumption) {
+    protected Vehicle(double fuelQuantity, double fuelConsumption) {
         this.fuelQuantity = fuelQuantity;
         this.fuelConsumption = fuelConsumption;
     }
 
-    public double getFuelQuantity() {
-        return fuelQuantity;
+    public void drive(double km) {
+        if (this.fuelConsumption * km <= this.fuelQuantity) {
+            this.fuelQuantity -= this.fuelConsumption * km;
+
+            System.out.printf("%s travelled %s km%n",
+                    this.getClass().getSimpleName(),
+                    new DecimalFormat("#.##").format(km));
+        } else {
+            System.out.printf("%s needs refueling%n", this.getClass().getSimpleName());
+        }
     }
 
-    public void setFuelQuantity(double fuelQuantity) {
-        this.fuelQuantity = fuelQuantity;
+    public void refuel(double liters) {
+        if (this.getClass().getSimpleName().equals("Car")) {
+            this.fuelQuantity += liters;
+        } else if (this.getClass().getSimpleName().equals("Truck")){
+            this.fuelQuantity += liters * 0.95;
+        }
     }
 
-    public double getFuelConsumption() {
-        return fuelConsumption;
-    }
-
-    public abstract void driving(double distance);
-    public abstract void refueling(double liters);
 
     @Override
     public String toString() {
-        return String.format("%.2f", this.getFuelQuantity());
+        return String.format("%s: %.2f", this.getClass().getSimpleName(), this.fuelQuantity);
     }
 }

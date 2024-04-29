@@ -16,39 +16,37 @@ public class Main {
         int n = Integer.parseInt(scanner.nextLine());
 
         for (int i = 0; i < n; i++) {
-            String[] token = scanner.nextLine().split("\\s+");
-            String operation = token[0];
-            String vehicleType = token[1];
+            String[] tokens = scanner.nextLine().split("\\s+");
 
-            drive(car, truck, token, operation, vehicleType);
-            refuel(car, truck, token, operation, vehicleType);
+            String operation = tokens[0];
+            String type = tokens[1];
+            double quantity = Double.parseDouble(tokens[2]);
+
+            if (operation.equals("Drive")) {
+                drive(car, truck, type, quantity);
+            } else if (operation.equals("Refuel")){
+                refuel(car, truck, type, quantity);
+            }
         }
 
         System.out.println(car);
         System.out.println(truck);
     }
 
-    private static void refuel(Car car, Truck truck, String[] token, String operation, String vehicleType) {
-        if ("Refuel".equals(operation)) {
-            double liters = Double.parseDouble(token[2]);
 
-            if ("vehicles_extension.Car".equals(vehicleType)) {
-                car.refueling(liters);
-            } else {
-                truck.refueling(liters);
-            }
+    private static void drive(Car car, Truck truck, String type, double quantity) {
+        if (type.equals("Car")) {
+            car.drive(quantity);
+        } else {
+            truck.drive(quantity);
         }
     }
 
-    private static void drive(Car car, Truck truck, String[] token, String operation, String vehicleType) {
-        if ("Drive".equals(operation)) {
-            double distance = Double.parseDouble(token[2]);
-
-            if ("vehicles_extension.Car".equals(vehicleType)) {
-                car.driving(distance);
-            } else {
-                truck.driving(distance);
-            }
+    private static void refuel(Car car, Truck truck, String type, double quantity) {
+        if (type.equals("Car")) {
+            car.refuel(quantity);
+        } else {
+            truck.refuel(quantity);
         }
     }
 }
