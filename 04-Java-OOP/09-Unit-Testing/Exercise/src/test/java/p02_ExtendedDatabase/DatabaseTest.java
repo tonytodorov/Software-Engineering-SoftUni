@@ -60,7 +60,6 @@ public class DatabaseTest {
         database = new Database(PEOPLE);
     }
 
-    // TODO
     @Test
     public void test_AddOperation_ShouldThrowException_WhenMultipleUsersHaveSame_ID() throws OperationNotSupportedException {
         database.add(new Person(1, "George"));

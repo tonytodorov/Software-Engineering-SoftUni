@@ -58,7 +58,8 @@ public class ListIteratorTest {
 
     @Test
     public void test_PrintMethod_ShouldPrint_CurrentElement() {
-        listIterator.print();
+        String expected = listIterator.print();
+        assertEquals(expected, listIterator.print());
     }
 
     @Test(expected = IllegalStateException.class)
