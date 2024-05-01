@@ -2,7 +2,7 @@ package vehicles;
 
 import java.text.DecimalFormat;
 
-public abstract class Vehicle {
+public class Vehicle {
 
     private double fuelQuantity;
     private double fuelConsumption;
@@ -13,8 +13,10 @@ public abstract class Vehicle {
     }
 
     public void drive(double km) {
-        if (this.fuelConsumption * km <= this.fuelQuantity) {
-            this.fuelQuantity -= this.fuelConsumption * km;
+        double distance = this.fuelConsumption * km;
+
+        if (distance <= this.fuelQuantity) {
+            this.fuelQuantity -= distance;
 
             System.out.printf("%s travelled %s km%n",
                     this.getClass().getSimpleName(),
@@ -25,13 +27,8 @@ public abstract class Vehicle {
     }
 
     public void refuel(double liters) {
-        if (this.getClass().getSimpleName().equals("Car")) {
-            this.fuelQuantity += liters;
-        } else if (this.getClass().getSimpleName().equals("Truck")){
-            this.fuelQuantity += liters * 0.95;
-        }
+        this.fuelQuantity += liters;
     }
-
 
     @Override
     public String toString() {
