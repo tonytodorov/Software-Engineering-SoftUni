@@ -11,3 +11,17 @@ blockquote {
     border-left: rgb(221,221,221);
     font-style: italic;
 }
+
+thead {
+    background-color: #d2d2d2;
+    border: none;
+}
+
+th, td {
+    width: 144px;
+    height: 32px;
+}
+
+tr:nth-child(odd) {
+    background-color: #eae8e8;
+}
