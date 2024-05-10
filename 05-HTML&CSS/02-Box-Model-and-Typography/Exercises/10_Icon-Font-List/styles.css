@@ -1,0 +1,23 @@
+@import url('/font-awesome-4.6.3/css/font-awesome.min.css');
+
+body {
+    font: 18px Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+ul.check i {
+    color: #2fcc71;
+}
+
+ul.star i {
+    color: coral;
+}
+
+ul.contact i {
+    color: #3498da;
+}
