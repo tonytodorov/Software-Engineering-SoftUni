@@ -1,0 +1,27 @@
+p.highlighted {
+    color: lightskyblue;
+    font-size: 18px;
+}
+
+div#special {
+    background: orange;
+    box-shadow: 0 0.2em 0.3em 0em rgb(0, 0, 0, 0.1);
+}
+
+a[href^="http"] {
+    border-bottom: 2px solid orange;
+    color: green;
+}
+
+p.fancy.pragmatic {
+    color: red;
+}
+
+li.important-color {
+    color: lightblue;
+}
+
+li.important-italic {
+    color: red;
+    font-style: italic;
+}

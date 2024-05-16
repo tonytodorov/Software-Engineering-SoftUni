@@ -1,0 +1,15 @@
+div p {
+    color: rgb(51, 51, 175);
+}
+
+ul > li {
+    list-style-type: circle;
+}
+
+p + p {
+    background-color: lightgreen;
+}
+
+p ~ span {
+    font-weight: 700;
+}

@@ -13,7 +13,3 @@ Service 2 description...
 Additional Information
 
 More details about our services.
-
-Contact Us
-
-Submit

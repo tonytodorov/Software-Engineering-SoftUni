@@ -1,0 +1,28 @@
+a {
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.italic {
+    font-style: italic;
+}
+
+li img {
+    border: 8px solid red;
+}
+
+article > p {
+    background: lightblue;
+}
+
+div {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+section article div p span {
+    color: rgb(141, 0, 0);
+}
