@@ -1,0 +1,32 @@
+section p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul > li {
+    font-weight: 900;
+    list-style-type: none;
+}
+
+article + article {
+    color: black;
+}
+
+h2 ~ p {
+    color: rgb(47, 161, 199);
+}
+
+ul li > a {
+    text-decoration: none;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+ul li.special ~ li {
+    color: red;
+}

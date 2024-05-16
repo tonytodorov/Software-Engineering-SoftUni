@@ -7,6 +7,35 @@
     <link rel="stylesheet" href="relative-selectors.css">
 </head>
 <body>
+    <section>
+        <p>This paragraph is a direct descendant of a section.</p>
+        
+        <article>
+            <p>This paragraph is within an article inside a section.</p>
+            <p>This paragraph is within a highlighted article.</p>
+            <p>This paragraph is in an article following a highlighted article.</p>
+
+            <ul>
+                <li>List Item 1</li>
+                <li class="special">List Item 2</li>
+                <li>List Item 3</li>
+                <li>
+                    List Item 4 with links:
+                    <ul>
+                        <li><a class="blue" href="#">Link 1</a></li>
+                        <li><a class="blue" href="#">Link 2</a></li>
+                        <li><a class="green" href="#">Link 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Siblings following this h2 are styled</h2>
+            <p>A sibling paragraph.</p>
+            <p>Another sibling paragraph.</p>
+        </article>
+    </section>
     
 </body>
 </html>
