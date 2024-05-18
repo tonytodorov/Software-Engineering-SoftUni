@@ -1,0 +1,68 @@
+body {
+    background: rgb(238, 238, 238);
+
+}
+
+ul {
+    border: 2px solid green;
+}
+
+a {
+    color: rgb(0, 102, 0);
+    text-decoration: none;
+}
+
+h1 {
+    font: 1em/1.2 Georgia, serif;
+}
+
+blockquote {
+    font-family: Georgia, serif;
+}
+
+body > header {
+    border-bottom: 3px solid black;
+}
+
+header p {
+    text-transform: none;
+    font-size: 3em;
+    font-weight: 700;
+    border: 2px solid red;
+}
+
+header ul {
+    border: 2px solid blue;
+}
+
+header li {
+    display: inline-block;
+    padding-left: 1em;
+}
+
+main {
+    border: 3px solid red;
+    max-width: 60em;
+    display: inline-block;
+}
+
+aside {
+    border: 2px solid blueviolet;
+    float: right;
+}
+
+img {
+    padding: 0.4em 0.4em;
+    margin: 0em 0.5em;
+    border: 3px solid black;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0.1em 0.2em 0.2em rgba(0, 0, 0, 0.25);
+}
+
+img[alt~="pic2"] {
+    float: right;
+}
+
+img[alt~="pic1"] {
+    float: left;
+}
