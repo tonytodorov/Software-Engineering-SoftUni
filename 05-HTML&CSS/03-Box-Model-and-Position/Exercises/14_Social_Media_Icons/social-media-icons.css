@@ -1,0 +1,28 @@
+li {
+    background: rgb(242, 242, 242);
+    border-radius: 50px;
+    margin-right: 15px;
+    padding: 15px 17px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+li .fa-square-facebook:hover {
+    color: #5a77bf;
+}
+
+li .fa-twitter:hover {
+    color: #189df0;
+}
+
+li .fa-google-plus:hover {
+    color: #f5501d
+}
+
+li .fa-linkedin:hover {
+    color: #0076b5
+}
+
+li .fa-instagram:hover {
+    color: #038fda
+}

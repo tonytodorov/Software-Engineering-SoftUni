@@ -1,0 +1,8 @@
+h1 {
+    position: absolute;
+    top: 9%;
+    left: 12%;
+    color: #f5ebd5;
+    font-size: 2em;
+    text-shadow: 1px 1px 20px black;
+}
