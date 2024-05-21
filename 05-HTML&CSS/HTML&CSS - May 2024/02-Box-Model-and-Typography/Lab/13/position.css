@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.static, .relative, .relative-absolute {
+    border: 2px solid black;
+    margin-left: 1em;
+    padding: 2em;
+}
+
+h2 {
+    margin: 1em 1em;
+}
+
+p {
+    border: 2px solid #c3c3c3;
+    padding-left: 0.2em;
+    margin-left: 1em;
+    width: 5em;
+    aspect-ratio: 1/1;
+}
+
+.static p:nth-child(2) {
+    position: static;
+}
+
+.relative p:nth-child(2) { 
+    position: relative;
+    background-color: rgb(90, 218, 90);
+    top: 2em;
+    left: 2em;
+    z-index: 1;
+}
+
+.relative-absolute {
+    position: relative;
+}
+
+.relative-absolute p:nth-child(2) {
+    position: absolute;
+    background-color: rgb(90, 218, 90);
+    top: 4em;
+    left: 4em;
+}
