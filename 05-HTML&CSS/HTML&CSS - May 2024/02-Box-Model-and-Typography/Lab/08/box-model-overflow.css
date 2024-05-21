@@ -1,0 +1,18 @@
+div p {
+    border: 3px solid black;
+    padding: 1em;
+    max-width: 300px;
+    max-height: 100px;
+}
+
+.visible p {
+    overflow: visible;
+}
+
+.hidden p {
+    overflow: hidden;
+}
+
+.scroll p{
+    overflow: auto;
+}
