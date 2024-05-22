@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font: 14px/1.5 Arial, sans-serif;
+}
+
+body {
+    background: #ebebeb;
+}
+
+img {
+    max-width: 20em;
+}
+
+section {
+    width: 20em;
+    position: absolute;
+    border: 2px solid green;
+}
+
+a {
+    overflow: hidden;
+}

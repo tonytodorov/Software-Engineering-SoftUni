@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+html {
+    font: 16px/1.5 Lato, sans-serif;
+    margin-left: 0.5em;
+}
+
+p, ul, ol {
+    padding-bottom: 1.5rem;
+}
+
+ul, ol {
+    padding-left: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(74, 74, 74);
+    line-height: 1.2;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {font-size: 2.4em;}
+h2 {font-size: 2em;}
+h3 {font-size: 1.6em;}
+h4 {font-size: 1.4em;}
+h5 {font-size: 1.2em;}
+h6 {font-size: 1em;}

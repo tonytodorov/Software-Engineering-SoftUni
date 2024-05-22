@@ -1,0 +1,14 @@
+@import url("reset.css");
+@import url("typography.css");
+
+div {
+    max-width: 45em;
+    margin: 2em auto;
+    padding: 1em 3em;
+    border: 2px solid lightgrey;
+}
+
+span {
+    color: rgb(39, 39, 39);
+    font-style: italic;
+}
