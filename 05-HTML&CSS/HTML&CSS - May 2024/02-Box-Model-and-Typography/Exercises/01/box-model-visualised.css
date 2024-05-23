@@ -1,26 +1,52 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 div {
     border: 2px dotted black;
-    padding: 2em;
+    padding: 0.5em 2em 2em 2em;
 }
 
-.outside {
-    background: rgb(255, 141, 100);
+.box-model {
+    max-width: 600px;
+    margin: 4em auto;
+    border: none;
+}
+
+.box-model div::before {
+    display: block;
+    padding-bottom: 0.5em;
+    margin-left: -1em;
+}
+
+.margin {
+    background: #f58e6e;
+}
+
+.margin::before {
+    content: 'margin';
 }
 
 .border {
-    background: wheat;
+    background: #fae8c5;
+}
+
+.border::before {
+    content: 'border';
 }
 
 .padding {
-    background: lightgreen;
+    background: #8efc88;
+}
+
+.padding::before {
+    content: 'padding';
 }
 
 .content {
-    background: lightblue;
+    background: #a6d6de;
     text-align: center;
+    padding: 1em;
 }
