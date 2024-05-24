@@ -1,15 +1,12 @@
 * {
     padding: 0;
     margin: 0;
-}
-
-.image {
-    width: auto;
+    box-sizing: border-box;
 }
 
 img {
-    height: 40em;
     width: 100%;
+    height: 40em;
 }
 
 .text {
