@@ -1,12 +1,56 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-li {
-    border: 2px solid black;
-    display: inline-block;
-    border-radius: 4px;
-    padding: 1em;
-    margin: 2em 1em 2em 2em;
+body {
+    background: #eee;
+    padding: 2em;
 }
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0.1em;
+}
+
+nav ul ul ul {
+    top: 0;
+    left: 100%;
+    margin-top: -0.1em;
+}
+
+nav ul ul li {
+    padding: 0.1em;
+}
+
+nav > ul > li {
+    display: inline-block;
+}
+
+nav li {
+    display: block;
+    position: relative;
+}
+
+nav li:hover > ul {
+    display: block;
+}
+
+nav a {
+    display: block;
+    background-color: #369;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+}
+
+nav li:hover > a,
+nav a:hover {
+    background-color: #69A;
+}
+
