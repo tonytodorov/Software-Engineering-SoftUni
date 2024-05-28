@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #eee;
+    padding: 2em;
+}
+
+.container {
+    display: flex;
+    max-width: 700px;
+    border: 2px solid black;
+    margin: auto;
+}
+
+.container > div {
+    border: 2px solid green;
+    width: 50px;
+    padding: 1em;
+    margin: 1em;
+    aspect-ratio: 1/1;
+}
