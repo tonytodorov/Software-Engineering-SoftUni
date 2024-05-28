@@ -1,0 +1,32 @@
+.flex-container {
+    border: 2px solid blue;
+    padding: 1em;
+    max-width: 400px;
+    display: flex;
+}
+
+.flex-container.one .item {
+    flex-grow: 1;
+}
+
+.flex-container.second-child .item.two {
+    flex-grow: 1;
+}
+
+.flex-container.proportionally .item.one {
+    flex-grow: 1;
+}
+
+.flex-container.proportionally .item.two {
+    flex-grow: 2;
+}
+
+.flex-container.proportionally .item.three {
+    flex-grow: 3;
+}
+
+.item {
+    border: 2px solid black;
+    background-color: #eee;
+    padding: 20px;
+}
