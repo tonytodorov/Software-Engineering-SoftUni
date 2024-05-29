@@ -16,14 +16,50 @@ body {
 .container {
     display: flex;
     max-width: 700px;
+    height: 600px;
     border: 2px solid black;
     margin: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row wrap;
 }
 
-.container > div {
+.container .item {
     border: 2px solid green;
     width: 50px;
     padding: 1em;
     margin: 1em;
     aspect-ratio: 1/1;
+}
+
+.container .item:nth-child(7) {
+    order: -1;
+}
+
+.container .item:nth-child(4) {
+    order: 1;
+}
+
+.container .item:nth-child(7) {
+    flex-grow: 4;
+}
+
+.container .item:nth-child(1) {
+    flex-grow: 2;
+}
+
+.container .item:nth-child(2) {
+    flex-grow: 1;
+}
+
+.container .item:nth-child(6) {
+    flex-basis: 240px;
+}
+
+.container .item:nth-child(4) {
+    align-self: center;
+}
+
+.container .item:nth-child(5) {
+    align-self: flex-end;
 }
