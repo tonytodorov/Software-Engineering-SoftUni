@@ -40,3 +40,8 @@ body {
 .site aside {
     flex: 1 0 auto;
 }
+
+.second header {order: 1;}
+.second aside {order: 2;}
+.second main {order: 3;}
+.second footer {order: 4;}
