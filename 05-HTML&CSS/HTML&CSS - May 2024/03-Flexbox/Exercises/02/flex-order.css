@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2em;
+    background-color: #eee;
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+.site {
+    max-width: 900px;
+    margin: 2em auto;
+    background-color: #fff;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+}
+
+.site > * {
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 0.3em;
+}
+
+.site header,
+.site footer {
+    flex: 1 0 100%;
+}
+
+.site main {
+    flex: 0 1 70%;
+}
+
+.site aside {
+    flex: 1 0 auto;
+}
