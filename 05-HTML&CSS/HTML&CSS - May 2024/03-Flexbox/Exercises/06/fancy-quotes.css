@@ -9,28 +9,50 @@ body {
     padding: 2em;
     background-color: #eee;
     font: 14px/1.5 Lato, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-article {
-    margin: 1em;
-    padding: 2em;
-    background-color: #fff;
-}
-
-p {
-    padding: 1em 1em 1em 0;
-}
-
-main article {
-    min-width: 580px;
 }
 
 .site {
     max-width: 900px;
     display: flex;
-    gap: 1em;
+    margin: 0 auto;
+    gap: 2em;
+}
+
+.site > main {
+    flex: 0 0 70%;
+}
+
+.site > aside {
+    flex: 1 1 auto;
+    display: flex;
+}
+
+article {
+    display: flex;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.1);
+}
+
+.site > main article {
+    display: flex;
+    gap: 2em;
+}
+
+article .media {
+    flex: 1 0 30%;
+    display: flex;
+}
+
+
+article .avatar {
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: #090;
+}
+
+
+article + article {
+    margin-top: 2em;
 }
