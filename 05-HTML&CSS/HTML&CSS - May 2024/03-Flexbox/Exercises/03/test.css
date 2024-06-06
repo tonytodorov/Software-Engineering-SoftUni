@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    padding: 2em;
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    border: 2px solid #ccc;
+    margin: 1em auto;
+    background-color: #fff;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.3);
+    border-radius: 0.3em;
+}
+
+.calendar {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 0.3em;
+    margin: 0.3em;
+}
+
+.calendar .week {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calendar section div {
+    border: 1px solid #ccc;
+    padding: 2em;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.calendar .week div:nth-child(1),
+.calendar .week div:nth-child(7) {
+    flex: 1 0 100%;
+}
+
+.calendar .notes {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+
+
+

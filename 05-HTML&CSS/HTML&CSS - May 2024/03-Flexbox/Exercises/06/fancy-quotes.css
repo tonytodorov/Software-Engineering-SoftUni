@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     padding: 2em;
     background-color: #eee;
@@ -12,7 +11,7 @@ body {
 }
 
 .site {
-    max-width: 900px;
+    max-width: 800px;
     display: flex;
     margin: 0 auto;
     gap: 2em;
@@ -28,14 +27,11 @@ body {
 }
 
 article {
-    display: flex;
-    background-color: #fff;
+    background: #fff;
     padding: 2em;
-    border-radius: 0.3em;
-    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.1);
 }
 
-.site > main article {
+.site main article {
     display: flex;
     gap: 2em;
 }
@@ -45,14 +41,39 @@ article .media {
     display: flex;
 }
 
-
 article .avatar {
     height: 100%;
+    min-height: 12em;
     aspect-ratio: 1/1;
-    background-color: #090;
+    border-radius: 50%;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 0.3em solid #fff;
 }
 
+article .avatar img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #090;
+}
+
+article p {
+    padding-bottom: 1.5em;
+}
 
 article + article {
     margin-top: 2em;
+}
+
+article .content::before {
+    display: block;
+    content: '"';
+    font-size: 6em;
+    line-height: 0.5;
+}
+
+aside article .media {
+    padding-top: 2em;
+
 }

@@ -6,34 +6,60 @@
 
 body {
     padding: 2em;
+    font: 14px/1.5 Lato, sans-serif;
 }
 
 .container {
     background-color: #eee;
+    border: 1px solid #dedede;
     border-radius: 0.3em;
-    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.3);
+    padding: 0.5em;
 }
 
-.container ul {
-    padding: 1em;
-    display: flex;
+.main-nav li {
+    display: block;
+    list-style: none outside;
+    position: relative;
 }
 
-.container li {
-    border: 1px solid #ccc;
-    list-style: none;
-    background-color: #fff;
-    padding: 0.5em 1em;
-    margin-right: 0.5rem;
-    border-radius: 0.3em;
+.main-nav > ul > li {
+    display: inline-block;
 }
 
-.container a {
+.main-nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 10rem;
+    padding: 0.2em;
+}
+
+.main-nav ul ul ul {
+    top: 0;
+    left: 100%;
+    padding: 0;
+}
+
+.main-nav a {
+    display: block;
     text-decoration: none;
-    color: #fc900c;
+    background: #fff;
+    border: 1px solid #dedede;
+    border-radius: 0.3em;
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
+    color: darkorange;
+    font-weight: bold;
 }
 
-.container li:hover {
-    background-color: #5f411d;
+.main-nav li:hover > a, 
+.main-nav a:hover {
+    background-color: darkorange;
+    color: #fff;
 }
 
+.main-nav li:hover > ul {
+    display: block;
+}
