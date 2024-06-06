@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="logical-operators.css">
 </head>
 <body>
-    <h1>Logical Operators</h1>
-
+    <header>
+        <h1>Logical Operators</h1>
+    </header>
+    
     <section class="and">
         <h2>and</h2>
         <p>Used for combining multiple media features together into a single media query, requiring each chained feature to return true for the query to be true. It is also used for joining media features with media types.</p>
@@ -16,8 +18,8 @@
             <pre>
 @media (min-width: 800px) and (max-width: 1200px) {
     body::before {
-    display: block;
-    content: 'The viewport width is larger than 800px and smaller than 1200px';
+        display: block;
+        content: 'The viewport width is larger than 800px and smaller than 1200px';
     }
 }     
             </pre>
@@ -31,8 +33,8 @@
             <pre>
 @media not (max-width: 1200px) {
     body::before {
-    display: block;
-    content: 'The viewport width is larger than 1200px';
+        display: block;
+        content: 'The viewport width is larger than 1200px';
     }
 }                    
             </pre>
@@ -46,8 +48,8 @@
             <pre>
 @media only screen and (min-width: 800px) {
     body::before {
-    display: block;
-    content: 'The device is using a screen and the viewport width is larger than 800px';
+        display: block;
+        content: 'The device is using a screen and the viewport width is larger than 800px';
     }
 }                    
             </pre>
