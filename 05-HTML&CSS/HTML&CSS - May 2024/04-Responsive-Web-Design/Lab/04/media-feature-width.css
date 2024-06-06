@@ -14,13 +14,6 @@
         padding-bottom: 1.5em;
     }
 
-    a {
-        display: block;
-        padding-bottom: 1em;
-        text-decoration: none;
-        color: #000;
-    }
-
     body::before {
         background-color: #326699;
         color: #fff;
@@ -30,16 +23,23 @@
     }
 }
 
-@media print {
+@media (width: 800px) {
     body::before {
         display: block;
-        content: 'The page is using a print preview or it was printed';
+        content: 'The viewport width is exactly 800px';
     }
-}  
+}
 
-@media screen {
+@media (min-width: 801px) {
     body::before {
         display: block;
-        content: 'The page is being shown on a screen';
+        content: 'The viewport width is larger than 800px';
+    }
+}
+
+@media (max-width: 800px) {
+    body::before {
+        display: block;
+        content: 'The viewport width is smaller than 800px';
     }
 }
