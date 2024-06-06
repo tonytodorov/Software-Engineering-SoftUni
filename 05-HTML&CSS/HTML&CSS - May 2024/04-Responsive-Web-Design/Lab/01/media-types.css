@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2em;
+    background-color: #f7f6f6;
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+h2 {
+    margin-top: 1em;
+}
+
+a {
+    display: block;
+    padding-bottom: 1em;
+    text-decoration: none;
+    color: #000;
+}
+
+@media (min-width: 1200px) {
+    header::before {
+        display: block;
+        content: 'The page is being shown on a screen';
+        background-color: #326699;
+        color: #fff;
+        padding: 1.2em 0 1.2em 1.5em;
+        border-radius: 0.3em;
+        margin-bottom: 1.5em;
+    }
+}
