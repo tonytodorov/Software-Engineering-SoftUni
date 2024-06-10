@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    padding: 2em;
+    font: 18px/1.5 Lato, sans-serif;
+}
+
+button {
+    border: none;
+    border-radius: 0.3em;
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
+    cursor: pointer;
+}
+
+.site {
+    background-color: #fff;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.1);
+    padding: 2em;
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 1em;
+}
+
+.content {
+    max-width: 700px;
+}
+
+.media {
+    border: 1px solid #ccc;
+    background-color: #eee;
+    border-radius: 0.3em;
+    width: 100%;
+}
+
+.lets-chat {
+    background-color: #663299;
+    color: #fff;
+}
+
+.learn-more {
+    opacity: 0.8;
+}
+
+.content p {
+    font-size: 14px;
+    margin: 1em 0;
+    opacity: 0.8;
+}
+
+.content header::before {
+    content: 'Racoon Journal Entry';
+    color: #858585;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.lets-chat:hover {
+    background-color: #510c97;
+}
+
+.learn-more:hover {
+    background-color: #ccc;
+}
+

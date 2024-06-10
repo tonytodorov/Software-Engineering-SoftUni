@@ -10,7 +10,7 @@ public abstract class VehicleImpl implements Vehicle {
     private double fuelConsumption;
     private double tankCapacity;
 
-    public VehicleImpl(double fuelQuantity, double fuelConsumption, double tankCapacity) {
+    protected VehicleImpl(double fuelQuantity, double fuelConsumption, double tankCapacity) {
         this.fuelQuantity = fuelQuantity;
         this.fuelConsumption = fuelConsumption;
         this.tankCapacity = tankCapacity;
