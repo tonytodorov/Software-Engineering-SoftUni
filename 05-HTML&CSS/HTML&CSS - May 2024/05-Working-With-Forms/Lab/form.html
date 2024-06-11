@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form action="#" method="get">
+        <h2>Registration</h2>
+
+        <fieldset>
+            <legend>Login Information</legend>
+
+            <p class="field">
+                <input type="text" name="register-email" id="register-email" placeholder="eg: tony@gmail.com" required>
+                <label for="register-email">Email</label>
+            </p>
+
+            <p class="field">
+                <input type="password" name="register-password" id="register-password" required>
+                <label for="register-password">Password</label>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+            
+            <p class="field">
+                <input type="text" name="register-name" id="register-name" placeholder="eg: John Doe">
+                <label for="register-name">Full Name</label>
+            </p>
+
+            <p class="field">
+                <textarea name="register-bio" id="register-bio"></textarea>
+                <label for="register-bio">Bio</label>
+            </p>
+        </fieldset>
+
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
