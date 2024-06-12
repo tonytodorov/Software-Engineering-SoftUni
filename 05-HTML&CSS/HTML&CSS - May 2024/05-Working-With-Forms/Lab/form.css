@@ -8,7 +8,7 @@ html {
     font: 14px/1.5 Lato, sans-serif;
 }
 
-body, input, select, option, button {
+body, input, select, option, button, textarea {
     font: inherit;
 }
 
@@ -30,7 +30,25 @@ form h2 {
     margin-bottom: 1rem;
 }
 
-input, label {
+form ul li {
+    list-style: none outside;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 0.3em;
+    padding: 2em;
+    margin-bottom: 1em;
+}
+
+fieldset legend {
+    padding: 0 1em;
+    margin-left: -1em;
+    font-weight: bold;
+}
+
+input[type="text"],
+.field label {
     display: block;
     width: 100%;
 }
@@ -46,6 +64,8 @@ input[required] ~ label::after {
     color: #C00;
 }
 
+select,
+textarea,
 input {
     padding: 0.5em 0.8em;
     border: 2px solid #ccc;
@@ -54,28 +74,49 @@ input {
     outline: none;
 }
 
-input:focus {
-    border-color: orange;
-}
-
-input:focus ~ label {
-    color: darkorange;
-}
-
-input:user-invalid {
+input[type="text"]:user-invalid,
+input[type="email"]:user-invalid {
     border-color: red;
 }
 
-input:user-invalid ~ label {
+input[type="email"]:user-invalid ~ label,
+input[type="email"]:user-invalid ~ .helper, 
+input[type="text"]:user-invalid ~ label, 
+input[type="text"]:user-invalid ~ .helper {
     color: red;
 }
 
-input:user-valid {
+input[type="text"]:user-invalid ~ .helper.error  {
+    display: block;
+}
+
+input[type="text"]:user-valid,
+input[type="email"]:user-valid {
     border-color: #090;
 }
 
-input:user-valid ~ label {
+input[type="text"]:user-valid ~ label,
+input[type="email"]:user-valid ~ label {
     color: #090;
+}
+
+input[type="text"]:user-valid ~ label::before,
+input[type="email"]:user-valid ~ label::before {
+    display: block;
+    content: '\f00c';
+    font-family: "Font Awesome 6 Free";
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+input[type="text"]:focus {
+    border-color: orange;
+}
+
+input[type="text"]:focus ~ label,
+input[type="email"]:focus ~ label {
+    color: darkorange;
 }
 
 input[type="submit"] {
@@ -86,8 +127,44 @@ input[type="submit"] {
     display: flex;
     flex-direction: column;
     padding-bottom: 1em;
+    position: relative;
 }
 
 .field label {
     order: -1;
+}
+
+.field .helper {
+    font-size: 0.9;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.field .helper.error {
+    display: none;
+}
+
+.field-radio,
+.field-checkbox {
+    padding-bottom: 1.5em;
+}
+
+.field-radio ul,
+.field-checkbox ul {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #ccc;
+    border-radius: 0.3em;
+    padding: 0.5em;
+}
+
+.field-radio ul li, 
+.field-checkbox ul {
+    flex: 1 1 120px;
+    display: flex;
+    align-items: center;
+}
+
+.field-radio ul li label {
+    padding-left: 0.2em;
 }

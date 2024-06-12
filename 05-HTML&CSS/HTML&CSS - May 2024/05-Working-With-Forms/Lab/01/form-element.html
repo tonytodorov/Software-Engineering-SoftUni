@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Element</title>
+</head>
+<body>
+    <h1>The Form Element</h1>
+    <p>The form element represents a document section containing interactive controls for submitting information.</p>
+
+    <section class="method get">
+        <h2>Attribute - method="get" (default)</h2>
+        <p>Form data appended to the action URL with a ? separator.</p>
+        <form action="#" method="get">
+            <label for="site-get">Search</label>
+            <input type="search" name="site-get" id="site-get">
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <section class="method post">
+        <h2>Attribute - method="post" (default)</h2>
+        <p>Form data sent as the request body.</p>
+        <form action="#" method="post">
+            <label for="site-post">Search</label>
+            <input type="search" name="site-post" id="site-post">
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+</body>
+</html>
