@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body, input, textarea, option, select, button, fieldset {
+    font: inherit;
+}
+
+body {
+    padding: 2em;
+}
+
+fieldset {
+    border: 2px solid #ccc;
+    border-radius: 0.3em;
+    max-width: 600px;
+    padding: 2em;
+}
+
+fieldset legend {
+    padding: 1em;
+    font-weight: bold;
+}
+
+fieldset label {
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 0.3em;
+    padding: 0.8em;
+    margin-bottom: 1.5em;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    order: -1;
+}

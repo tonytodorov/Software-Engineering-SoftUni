@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body, input, textarea, option, select, button {
+    font: inherit;
+}
+
+body {
+    padding: 2em;
+}
+
+h1 + p {
+    padding-bottom: 1em;
+}
