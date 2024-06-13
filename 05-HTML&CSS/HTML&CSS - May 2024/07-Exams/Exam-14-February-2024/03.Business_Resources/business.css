@@ -11,12 +11,19 @@ html {
     font: 20px/1.5 "PT Sans", sans-serif;
 }
 
+body {
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "PT Serif";
 }
 
-.site-section.banner{
-    background-color: #060142;
+.site-section.banner {
+    padding-bottom: 10em;
 }
 
 .container {
@@ -60,7 +67,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-header nav a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
+    text-transform: uppercase;
+
 }
 
 .site-title a {
@@ -75,6 +84,110 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
 }
 
+.site-section.columns {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding-bottom: 5em;
+}
+
+
+.site-section.sponsors {
+    background-color: #fff;
+}
+
+.site-section.sponsors img {
+    display: block;
+    width: 180px;
+    background-color: #DDDDDD;
+    padding: 1.5em;
+    border-radius: 50%;
+}
+
+.site-section.sponsors .media {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+}
+
+.site-section.partners {
+    background-color: #fff;
+}
+
 .site-footer {
+    color: #fff;
     background-color: #171720;
+}
+
+.column-container {
+    display: flex;
+    gap: 2em;
+}
+
+.column-container h2 {
+    font-size: 2.5em;
+    font-weight: normal;
+    padding-bottom: 0.5rem;
+}
+
+.column-container p {
+    padding-bottom: 2.5em;
+}
+
+.column-container a {
+    border: 3px solid #B0825C;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    font-weight: bold;
+    color: #B0825C;
+}
+
+.column-container h4 {
+    font-size: 1.3em;
+    font-weight: normal;
+    padding-bottom: 1.3em;
+}
+.column-container ul {
+    list-style: none outside;
+}
+
+.column-container ul li {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    padding-bottom: 0.8em;
+    opacity: 0.7;
+}
+
+.site-section.sponsors,
+.site-section.partners {
+    text-align: center;
+}
+
+.site-section p {
+    padding-bottom: 4em;
+    opacity: 0.8;
+}
+
+.site-section p:nth-last-child(1) {
+    padding-bottom: 1.5em;
+}
+
+.site-section.sponsors h2,
+.site-section.partners h2 {
+    font-size: 3em;
+    font-weight: normal;
+    padding-bottom: 1rem;
+    color: #B0825C;
+}
+
+.site-footer:last-of-type {
+    border-top: 1px solid rgb(255, 255, 255, 0.2);
+    padding: 1em;
+}
+
+.site-footer:last-of-type p {
+    opacity: 0.7;
+}
+
+.site-footer .column-container {
+    gap: 4em;
 }
