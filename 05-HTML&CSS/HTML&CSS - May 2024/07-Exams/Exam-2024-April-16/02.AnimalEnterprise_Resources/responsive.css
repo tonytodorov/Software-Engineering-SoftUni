@@ -1,0 +1,24 @@
+@media (max-width: 600px) {
+
+    .home-blog {
+        padding: 0;
+    }
+
+    .navigation-links-nav {
+        flex-direction: column;
+    }
+
+    .blog-post-card3-blog-post-card {
+        flex-direction: column;
+    }
+
+    .blog-post-card3-image {
+        padding: 0 30px;
+    }
+
+    .blog-post-card3-container {
+        padding: 50px;
+        overflow: hidden;
+    }
+
+}

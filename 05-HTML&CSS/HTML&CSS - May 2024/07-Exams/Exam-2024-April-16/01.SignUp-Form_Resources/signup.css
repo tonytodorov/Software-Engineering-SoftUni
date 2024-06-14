@@ -81,7 +81,7 @@ input[type="submit"] {
 .field {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
+    gap: 1.5em;
 }
 
 input[type="text"] {

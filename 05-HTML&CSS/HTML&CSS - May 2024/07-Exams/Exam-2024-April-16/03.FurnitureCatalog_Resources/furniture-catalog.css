@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i&amp;display=swap ");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 20px/1.5 "PT Sans", sans-serif;
+}
+
+body {
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "PT Serif";
+}
+
+.site-section.banner {
+    padding-bottom: 10em;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.site-section.banner .container {
+    text-align: center;
+    color: #000;
+}
+
+.site-section.banner h1 {
+    font-size: 2.5em;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-top: 4.5em;
+    padding-bottom: 0.5em;
+}
+
+.site-section.banner p {
+    font-weight: 900;
+    font-size: 1.1em;
+}
+
+.site-section.banner p:last-of-type {
+    margin-bottom: 2em;
+}
+
+.site-section.banner a {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #E7EEF0;
+    border-radius: 0.3em;
+    font-weight: bold;
+    color: #686666;
+    padding: 0.5em 0.8em;
+
+}
+
+.site-section {
+    padding: 2em;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.site-header nav ul {
+    display: flex;
+}
+
+.site-header nav li {
+    list-style: none outside;
+    padding-right: 1em;
+}
+
+.site-header nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 900;
+}
+
+.site-title a {
+    display: block;
+    width: 130px;
+    height: 110px;
+    overflow: hidden;
+    text-indent: -200vw;
+    background-image: url("images/logo.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.site-section.columns {
+    background-color: #5EA8BC;
+    padding-bottom: 5em;
+}
+
+.column-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-around;
+}
+
+.column-container img {
+    width: 300px;
+    height: 300px;
+}
+
+.column-container h2,
+.column-container p {
+    background-color: #fff;
+    max-width: 300px;
+    padding-left: 2em;
+}
+
+.column-container .column {
+    display: flex;
+}
+
+.column-container .img {
+    display: flex;
+    flex-direction: column;
+}
