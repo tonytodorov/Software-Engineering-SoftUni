@@ -1,0 +1,51 @@
+@media (max-width: 600px) {
+
+    .placeholder {
+        width: auto;
+    }
+    .tm-site-title {
+        margin-bottom: 0;
+    }
+
+    .tm-header-inner {
+        padding: 0;
+    }
+
+    .tm-site-logo {
+        width: 70px;
+    }
+
+    .parallax-window {
+        height: 150px;
+    }
+
+    .tm-header {
+        bottom: 10%;
+        left: 8%
+    }
+
+    .tm-gallery {
+        margin-left: auto;
+    }
+
+    .tm-gallery-page {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .tm-cta-section {
+        width: auto;
+    }
+   
+    .tm-description-figure {
+        width: auto;
+    }
+
+    .tm-footer {
+        margin-top: 20px;
+    }
+
+    .row {
+        margin-left: 0;
+    }
+}
