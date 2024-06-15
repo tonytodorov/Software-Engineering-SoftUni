@@ -1,0 +1,58 @@
+@media (max-width: 720px) {
+    .team-description ul {
+        gap: 2em;
+        flex-wrap: wrap;
+    }
+
+    .team-description ul li img {
+        height: 215px;
+        padding: 0;
+        padding-bottom: 0.5em;
+    }
+
+    header {
+        padding-bottom: 4rem;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    header nav ul li {
+        display: flex;
+        font-size: 1.2em;
+        font-weight: bold;
+        padding-bottom: 0.5em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-title {
+        padding: 0;
+    }
+
+    .header-title h1 {
+        font-size: 40px;
+        padding-top: 0.5em;
+    }
+
+    .blog-news ul {
+        flex-wrap: wrap;
+        gap: 2em;
+    }
+
+    .choose-us ul {
+        gap: 1em;
+        flex-direction: column;
+    }
+
+    .choose-us p {
+        max-width: 350px;
+        margin: 0 auto;
+    } 
+
+    .about-us p:nth-child(3) {
+        width: auto;
+        max-width: 460px;
+    }
+}

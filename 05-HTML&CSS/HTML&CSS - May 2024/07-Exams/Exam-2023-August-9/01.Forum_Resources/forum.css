@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Inter, sans-serif;
+}
+
+body {
+    padding: 2em;
+    background-color: #eee;
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+.site {
+    max-width: 800px;
+    display: flex;
+    margin: 0 auto;
+    gap: 2em;
+}
+
+.site > main {
+    flex: 0 0 70%;
+}
+
+.site > aside {
+    flex: 1 1 auto;
+    display: flex;
+}
+
+article {
+    background: #fff;
+    padding: 2em;
+}
+
+.site main article {
+    display: flex;
+    gap: 2em;
+}
+
+article .media {
+    flex: 1 0 30%;
+    display: flex;
+}
+
+article .avatar {
+    height: 100%;
+    min-height: 12em;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 0.3em solid #fff;
+}
+
+article .avatar img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #090;
+}
+
+article p {
+    padding-bottom: 1.5em;
+}
+
+article + article {
+    margin-top: 2em;
+}
+
+article .content::before {
+    display: block;
+    content: '"';
+    font-size: 6em;
+    line-height: 0.5;
+}
+
+aside article .media {
+    padding-top: 2em;
+
+}
