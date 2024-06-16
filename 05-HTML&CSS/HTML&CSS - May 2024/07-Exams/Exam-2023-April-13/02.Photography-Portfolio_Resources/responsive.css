@@ -51,4 +51,30 @@
     .home-image {
         display: none;
     }
+
+    .home-top-part {
+        flex-direction: column;
+    }
+
+    .home-links-container {
+        width: auto;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .home-text13 {
+        margin-top: 20px;
+    }
+
+    .home-subscribe-container {
+        width: auto;
+    }
+
+    .button-primary {
+        padding: 1.5em 1.8em;        
+    }
+
+    .home-max-width {
+        padding-top: 40px;
+    }
 }
