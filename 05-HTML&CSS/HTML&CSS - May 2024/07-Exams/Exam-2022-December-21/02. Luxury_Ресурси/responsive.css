@@ -1,0 +1,11 @@
+@media (max-width: 600px) {
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .div-logo > img {
+        background-color: blue;
+    }
+
+}

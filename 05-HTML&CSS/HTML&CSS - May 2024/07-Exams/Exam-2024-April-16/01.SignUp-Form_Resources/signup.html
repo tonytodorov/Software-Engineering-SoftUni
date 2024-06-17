@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-    <div class="form">
+    <form class="#">
         <div class="buttons">
             <a href="#">Sign Up</a>
             <a href="#">Log In</a>
@@ -15,14 +15,29 @@
 
         <h2>Sign Up for Free</h2>
 
+        <div class="flex">
+            <div class="field">
+                <input type="text" name="first-name" id="first-name" required>
+                <label for="first-name">First Name</label>
+            </div>
+            
+            <div class="field">
+                <input type="text" name="last-name" id="last-name" required>
+                <label for="last-name">Last Name</label>
+            </div>
+        </div>
+        
         <div class="field">
-            <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
-            <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
-            <input type="email" name="email-address" id="email-name" placeholder="Email Address" required>
-            <input type="password" name="password" id="password" placeholder="Set A Password" required>
+            <input type="email" name="email-address" id="email-name" required>
+            <label for="email">Email</label>
+        </div>
+        
+        <div class="field">
+            <input type="password" name="password" id="password" required>
+            <label for="password">Password</label>
         </div>
 
         <input type="submit" value="Get Started">
-    </div>
+    </form>
 </body>
 </html>

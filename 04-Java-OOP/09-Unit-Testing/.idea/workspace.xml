@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="959466be-83ca-4394-96bf-668079aedbe5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../11-Design-Patterns/.idea/11-Design-Patterns.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11-Design-Patterns/Lab/.idea/uiDesigner.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2hhhp8Im5KQVxApJX8cLi7XsgQR" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Software University/Software-Engineering-SoftUni/04-Java-OOP/09-Unit-Testing/Lab"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="959466be-83ca-4394-96bf-668079aedbe5" name="Changes" comment="" />
+      <created>1718052396784</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718052396784</updated>
+    </task>
+    <servers />
+  </component>
+</project>
