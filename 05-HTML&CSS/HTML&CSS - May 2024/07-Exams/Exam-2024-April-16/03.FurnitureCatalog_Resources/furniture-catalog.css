@@ -6,16 +6,25 @@
     box-sizing: border-box;
 }
 
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 html {
-    font: 14px/1.5 "PT Sans", sans-serif;
+    font: 16px/1.5 "PT Sans", sans-serif;
+}
+
+body {
+    background-image: url("images/background.jpg");
+    background-position: center -19em;
+    background-repeat: no-repeat;
+    background-size: 1920px auto;
 }
 
 body, input, textarea, button {
     font: inherit;
-}
-
-body {
-  
 }
 
 h1 {font-size: 2.4em;}
@@ -24,15 +33,6 @@ h3 {font-size: 1.8em;}
 h4 {font-size: 1.4em;}
 h5 {font-size: 1.2em;}
 h6 {font-size: 1.0em;}
-
-
-/* Sections */
-
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 
 /* Components */
@@ -50,6 +50,21 @@ h6 {font-size: 1.0em;}
     display: block;
     padding: 0.5em 1em;
     text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.flex-columns {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-columns.c2 > * {
+    flex: 1 1 45%;
+}
+
+.flex-columns.c3 > * {
+    flex: 0 0 30%;
 }
 
 
@@ -60,12 +75,161 @@ h6 {font-size: 1.0em;}
     margin: 0 auto;
 }
 
-.section .wide {
-    max-width: 1800px;
+.section .wrapper.narrow {
+    max-width: 1000px;
+}
+
+.site-header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
 }
 
 .section-catalog {
     background-color: #60ACC1;
+}
+
+.section-banner,
+.section-catalog header,
+.section-about {
+    text-align: center;
+}
+
+.site-header .site-title a {
+    display: block;
+    width: 7em;
+    height: 4em;
+    background: url("images/logo.png") center no-repeat;
+    background-size: contain;
+    text-indent: -100vw;
+    overflow: hidden;
+}
+
+.section-banner .wrapper {
+    padding: 6em 0 4em 0;
+}
+
+.section-banner .wrapper h2 {
+    padding-bottom: 1rem;
+}
+
+.section-banner .wrapper .button {
+    display: inline-block;
+    background-color: #E7EEF0;
+    border-radius: 0.3em;
+    color: #686666;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 2em;
+    padding: 0.5em 1em;
+}
+
+.section-catalog .wrapper {
+    padding: 1em 0 2em 0;
+}
+
+.section-catalog header {
+    padding-bottom: 1.5em;
+}
+
+.section-catalog header h3 {
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+.section-catalog .flex-columns.c2  {
+    gap: 11em;
+}
+
+.section-catalog .flex-columns.c2 article {
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 0 1em 0.1em rgb(0, 0, 0, 0.6);
+    border-right: double;
+    border-right-color: #60ACC1;
+    border-right-width: 0.7em;
+}
+
+.section-catalog .flex-columns.c2 article > * {
+    flex: 0 0 50%;
+}
+
+.section-catalog .flex-columns.c2 article h4 {
+    font-size: 1em;
+    text-align: center;
+}
+
+.section-catalog .flex-columns.c2 article .media {
+    overflow: hidden;
+    position: relative;
+}
+
+.section-catalog .flex-columns.c2 article .media img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+}
+
+.section-catalog .flex-columns.c2 article section {
+    background-color: #fff;
+    padding: 3em 2em;
+}
+
+.section-catalog .flex-columns.c3 {
+    gap: 3em;
+}
+
+.section-catalog .flex-columns.c3 img {
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.8);
+}
+
+
+.section-furniture {
+    background-color: #fff;
+}
+
+.section-furniture .wrapper {
+    text-align: center;
+    padding: 3em 0;
+    flex: 1 1 auto;
+}
+
+.section-furniture .flex-columns.c3 {
+    flex: 1 1 30%;
+    gap: 2em;
+}
+
+.section-furniture .flex-columns.c3 img {
+    width: 5em;
+    height: 5em;
+    margin: 0 auto;
+}
+
+.site-footer .wrapper {
+    padding: 1em 0;
+}
+
+.section-about .wrapper {
+    padding: 2em;
+    opacity: 0.6;
+}
+
+.section-about .wrapper header {
+    padding-bottom: 2em;
+}
+
+.section-about .wrapper header h3 {
+    font-size: 1.2em;
+}
+
+.section-about .wrapper header p {
+    font-style: italic;
+}
+
+.section-about .wrapper p {
+    max-width: 100ch;
+    margin: 0 auto;
 }
 
 .site-footer {
@@ -74,6 +238,3 @@ h6 {font-size: 1.0em;}
     text-align: center;
 }
 
-.site-footer .wrapper {
-    padding: 1em 0;
-}
