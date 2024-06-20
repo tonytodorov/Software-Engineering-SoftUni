@@ -19,7 +19,8 @@ img {
     width: 100%;
     height: 100%;
     border-radius: 0.3em;
-    min-width: 600px;
+    background-size: cover;
+    box-shadow: inset 2em 2em 2em rgba(0, 0, 0, 0.8);
 }
 
 .site {
@@ -44,10 +45,87 @@ img {
     text-align: center;
     font-size: 2em;
     text-transform: uppercase;
-    padding-bottom: 2em;
+    padding: 2em 0;
+    font-weight: 500;
 }
 
 .site .content .buttons {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 2em;
+}
+
+.site .content .buttons a {
+    text-decoration: none;
+    color: #000;
+    background-color: #E0E0DF;
+    padding: 0.3em 1.4em;
+    border-radius: 0.5em;
+    border: 1px solid #000;
+}
+
+.site .content .buttons a:first-of-type {
+    background-color: #86D862;
+}
+
+.center-content {
+    max-width: 600px;
+}
+
+form {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-bottom: 0.5em;
+}
+
+p ~ p {
+    padding-top: 1em;
+    padding-bottom: 0;
+} 
+
+.gender {
+    justify-content: center;
+    gap: 2em;
+}
+
+.gender input,
+.gender select {
+    flex: 0 1 30%;
+}
+
+.weight input {
+    flex: 0 1 90%;
+}
+
+.height input {
+    flex: 0 1 50%;
+}
+
+.height {
+    gap: 1em;
+}
+
+.height input {
+    border-radius: 0.3em;
+    border: 1px solid #9C9C9C;
+}
+
+input[type="button"] {
+    display: block;
+    margin: 4.5em auto;
+    background-color: #05A2D3;
+    color: #fff;
+    box-shadow: 0 1em 1em 0 rgb(0, 0, 0, 0.3);
+    width: 100%;
+    border: none;
+    padding: 0.3em 0;
+    font-weight: bold;
+    border-radius: 1em;
 }
