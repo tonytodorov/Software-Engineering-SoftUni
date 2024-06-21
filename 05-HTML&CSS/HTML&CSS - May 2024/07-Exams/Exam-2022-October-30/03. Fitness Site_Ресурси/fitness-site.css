@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 16px/1.5 'PT Sans', sans-serif;
+}
+
+.site-header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2.5em;
+    background-color: #D01919;
+    color: #fff;
+    font-weight: normal;
+}
+
+.site-header .wrapper i {
+    color: #fff;
+    padding-right: 0.2em;
+}
+
+.site-header .wrapper span {
+    padding-left: 0.4em;
+    font-weight: 100;
+}
+
+.site-header .wrapper p {
+    font-size: 1.2em;
+}
+
+.site-header .social-media ul {
+    display: flex;
+}
+
+.site-header .social-media ul li {
+    list-style: none outside;
+    padding-right: 0.8em;
+}
+
+.site-header .social-media ul li a i {
+    font-size: 1.5em;
+}
+
+.section-banner {
+    background-image: url(image/fitness-main.jpg);
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: #fff;
+}
+
+.section-banner .main-nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10em;
+}
+
+.section-banner .main-nav ul {
+    display: flex;
+    gap: 2em;
+}
+
+.section-banner .main-nav ul li {
+    list-style: none outside;
+    padding-right: 2em;
+    margin: 2em 1em;
+}
+
+.section-banner .main-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.section-banner .content {
+    text-align: center;
+}
+
+.section-banner .content h2 {
+    font-size: 5em;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-bottom: 0.6em;
+}
+
+.section-banner .content p {
+    font-size: 1.5em;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: normal;
+    padding-bottom: 2em;
+}
+
+.section-banner .content a {
+    display: inline-block;
+    margin-bottom: 10em;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    background-color: #D01919;
+    padding: 0.3em 1.4em;
+    border-radius: 0.3em;
+}
+
+
+.section-catalog {
+    padding: 2em;
+    text-align: center;
+}
+
+.section-catalog img {
+    display: block;
+    width: 10%;
+    height: auto;
+}
+
+.section-catalog .media {
+    display: flex;
+    justify-content: center;
+}
+
+.section-catalog .flex-columns {
+    display: flex;
+    gap: 2em;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2em;
+}
+
+.section-catalog .flex-columns h3 {
+    color: #D01919;
+    padding: 1em 0;
+}
+
+.section-catalog .flex-columns p {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.section-catalog header h2 {
+    font-size: 2em;
+}
+
+.section-catalog header h2::after {
+    display: block;
+    content: '';
+    width: 1.5em;
+    height: 1em;
+    border-bottom: 3px solid #D01919;
+    margin: 0 auto;
+    margin-top: 0.3em;
+}
+
+.section-catalog.v2 {
+    background-color: #EFEFEF;
+}
+
+.section-catalog.v2 img {
+    width: 100%;
+    border-radius: 0.3em;
+}
+
+.section-catalog.v2 h3 {
+    padding-bottom: 0.2em;
+    color: #000;
+}
+
+.section-catalog.v2 h4 {
+    padding-bottom: 1em;
+    color: #D01919;
+}
+
+.section-catalog.v2 p {
+    opacity: 0.5;
+}
+
+.site-footer  {
+    padding: 0.5em;
+    background-color: #D01919;
+    text-align: center;
+}
