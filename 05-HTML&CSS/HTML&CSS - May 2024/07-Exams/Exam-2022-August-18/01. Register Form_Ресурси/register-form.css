@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Mulish, sans-serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+body {
+    background-image: url("images/background.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.site {
+    max-width: 850px;
+    margin: 3em auto;
+    background-color: #fff;
+    border-radius: 2em;
+    box-shadow: 2em 1.5em 1em 0 rgb(0, 0, 0, 0.4);
+}
+
+.content {
+    max-width: 850px;
+    display: flex;
+    gap: 2em;
+    margin-left: 5em;
+}
+
+.content .flex {
+    display: flex;
+    gap: 2em;
+}
+
+.content .field {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.8em;
+}
+
+.content .field label {
+    order: -1;
+    padding-bottom: 0.5em;
+    opacity: 0.8;
+}
+
+.content h2 {
+    text-align: center;
+    margin: 3.2em 0 1em 0;
+    font-size: 2em;
+    text-transform: uppercase;   
+}
+
+.content input {
+    padding: 1em;
+    border-radius: 2em;
+    background-color: #fff;
+    border: 0.1px solid #ccc;
+}
+
+.content input[type="submit"] {
+    display: block;
+    margin: 3em auto;
+    padding: 0.8em 1.8em;
+    background-color: #AE3C33;
+    color: #fff;
+}
+
