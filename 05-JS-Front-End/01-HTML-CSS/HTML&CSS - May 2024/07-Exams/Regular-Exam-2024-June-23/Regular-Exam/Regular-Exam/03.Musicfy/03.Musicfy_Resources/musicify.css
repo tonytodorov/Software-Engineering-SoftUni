@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 18px/1.5 Lato, sans-serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat, sans-serif;
+}
+
+.site-header {
+    background-color: #000;
+}
+
+.site-header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .main-nav ul {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-header .main-nav li {
+    list-style: none outside;
+    padding-right: 1em;
+}
+
+.site-header .main-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.site-header .site-title a {
+    display: block;
+    width: 7em;
+    height: 4em;
+    background: url("images/logo.jpeg") center no-repeat;
+    background-size: contain;
+    text-indent: -100vw;
+    overflow: hidden;
+}
+
+.section-banner {
+    background-color: #1DB954;
+    max-height: 320px;
+}
+
+
+.section-banner .wrapper {
+    background-image: url("images/music.png");
+    background-position: bottom left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 5em;
+}
+
+.section-banner .wrapper h3 {
+    text-align: center;
+    padding: 2em 0;
+    position: relative;
+    color: #fff;
+}
+
+.section-banner .plan-info {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section-banner .plan-info ul {
+    padding-left: 3em;
+}
+
+.section-banner .plan-info li {
+    opacity: 0.8;
+}
+
+.section-banner .plan-info a {
+    display: block;
+    max-width: 270px;
+    margin: 2em auto;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1DB954;
+    border-radius: 2em;
+    padding: 0.4em 0;
+    font-weight: bold;
+}
+
+.section-banner .plan-info .card {
+    max-width: 520px;
+    background-color: #fff;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.5em 0.1em rgb(0, 0, 0, 0.6);
+}
+
+.section-banner .plan-info .card h2 {
+    text-align: center;
+    padding: 1em 0;
+    opacity: 0.8;
+}
+
+.section-banner .plan-info .price {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3em;
+    background-color: #000;
+    color: #fff;
+    padding: 0.8em;
+    border-radius: 0 0 0.4em 0.4em;
+}
+
+.section-banner .card.individual .price p:first-of-type {
+    padding-right: 0.8em;
+}
+
+.section-banner .card.individual .price p:first-of-type::after {
+    display: inline-block;
+    content: '|';
+    padding-left: 0.2em;
+}
+
+.section-dogs {
+    margin-top: 20em;
+}
+
+.section-dogs .wrapper {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4em;
+    margin-bottom: 4em;
+}
+
+.section-dogs .information h3 {
+    padding: 1em 0;
+    font-size: 1.1em;
+}
+
+.section-dogs .information ol {
+    padding-left: 1em;
+}
+
+.section-dogs .information li {
+    padding-bottom: 0.5em;
+}
+
+.section-experience .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-experience header h1 {
+    font-size: 2.5em;
+    padding: 0.5em 0;
+}
+
+.section-experience header p {
+    padding-bottom: 1.5em;
+}
+
+.section-experience .table {
+    margin-bottom: 5em;
+}
+
+.section-experience .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6em;
+}
+
+.section-experience .content:first-of-type {
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.section-experience .content:last-of-type {
+    border-radius: 0 0 0.5em 0.5em;
+}
+
+.section-experience .content:nth-child(odd) {
+    background-color: #CCCBCB;
+}
+
+.section-experience .content:nth-child(even) {
+    background-color: #81D8A0;
+}
+
+.section-experience .content img {
+    width: 25px;
+    height: 25px;
+}
+
+.section-experience .content .mark {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 8em;
+    padding-right: 5em;
+}
+
+.site-footer {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 1.5em;
+}
