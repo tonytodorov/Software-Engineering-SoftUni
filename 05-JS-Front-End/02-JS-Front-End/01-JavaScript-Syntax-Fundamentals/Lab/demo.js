@@ -56,3 +56,13 @@ switch (name) {
 if (name) {
     console.log('There is Test');
 }
+
+// Cast string to number
+let intNumber = parseInt('10');
+let floatNumber = parseFloat('3.14');
+let parsedNumber = Number('101.2031') // Any value can parse
+
+console.log(parsedNumber);
+
+// NaN
+console.log(Number('Ivan'));
