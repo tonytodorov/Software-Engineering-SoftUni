@@ -1,24 +1,23 @@
 function search() {
-   const textFieldValue = document.getElementById('searchText').value
-   const towns = document.getElementById('towns').innerText
-   const items = document.getElementsByTagName('li')
+   const townsListElement = Array.from(document.getElementById('towns').children)
+   const inputElement = document.getElementById('searchText')
+   const resultElement = document.getElementById('result')
+   
+   let count = 0
 
-   const townsArray = towns.split('\n')
+   for (let i = 0; i < townsListElement.length; i++) {
+      const element = townsListElement[i].innerText;
 
-   let countMatches = 0
+      townsListElement[i].style.textDecoration = 'none'
+      townsListElement[i].style.fontWeight = 'normal'
 
-   for (let i = 0; i < townsArray.length; i++) {
-
-      items[i].style.fontWeight = 'normal'
-      items[i].style.textDecoration = 'none'
-
-      if(townsArray[i].includes(textFieldValue)) {
-         countMatches++
-         items[i].style.fontWeight = 'bold'
-         items[i].style.textDecoration = 'underline'
+      if (element.includes(inputElement.value)) {
+         count++
+         townsListElement[i].style.textDecoration = 'underline'
+         townsListElement[i].style.fontWeight = 'bold'
       }
    }
 
-   const result = document.getElementById('result')
-   result.innerHTML = `${countMatches} matches found`
+   inputElement.value = ''
+   resultElement.textContent = `${count} matches found`
 }
