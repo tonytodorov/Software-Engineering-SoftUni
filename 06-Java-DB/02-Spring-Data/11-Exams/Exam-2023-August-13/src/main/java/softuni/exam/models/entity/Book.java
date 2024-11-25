@@ -1,5 +1,7 @@
 package softuni.exam.models.entity;
 
+import softuni.exam.models.enums.Genre;
+
 import javax.persistence.*;
 import java.util.List;
 

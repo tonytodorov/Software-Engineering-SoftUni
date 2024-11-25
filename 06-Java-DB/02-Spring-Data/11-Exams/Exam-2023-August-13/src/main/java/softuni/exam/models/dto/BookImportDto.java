@@ -27,7 +27,6 @@ public class BookImportDto {
 
     @Expose
     @Positive
-
     private double rating;
 
     public String getAuthor() {
