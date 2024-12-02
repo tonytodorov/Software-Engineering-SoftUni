@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a2df72e6-13a3-4192-a542-11e5f14d78ef" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Exam-2024-March-30/.idea/Exam-2024-March-30.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exam-2024-March-30/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Exam-2024-March-30/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exam-2024-March-30/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Exam-2024-March-30/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exam-2024-March-30/.idea/modules.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2pGUKOKGRn3rnPBOJt56v4oSFja" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.softuni.exam.areImported in exam.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.softuni.exam.database in exam.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.softuni.exam.export in exam.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.softuni.exam.import_Devices in exam.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.softuni.exam.import_Sale in exam.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.softuni.exam.import_Sellers in exam.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.softuni.exam.readFile in exam.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ExamApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Software University/Software-Engineering-SoftUni/06-Java-DB/02-Spring-Data/11-Exams/Exam-2024-April-14&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="softuni.exam.models.dto" />
+      <recent name="softuni.exam.service.impl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ExamApplication">
+    <configuration name="softuni.exam.export in exam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exam" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="softuni.exam.export.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="softuni.exam.export" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="softuni.exam.import_Devices in exam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exam" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="softuni.exam.import_Devices.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="softuni.exam.import_Devices" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="softuni.exam.import_Sale in exam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exam" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="softuni.exam.import_Sale.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="softuni.exam.import_Sale" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="softuni.exam.import_Sellers in exam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exam" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="softuni.exam.import_Sellers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="softuni.exam.import_Sellers" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="softuni.exam.readFile in exam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exam" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="softuni.exam.readFile.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="softuni.exam.readFile" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExamApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="exam" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="softuni.exam.ExamApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.softuni.exam.export in exam" />
+        <item itemvalue="JUnit.softuni.exam.import_Devices in exam" />
+        <item itemvalue="JUnit.softuni.exam.import_Sale in exam" />
+        <item itemvalue="JUnit.softuni.exam.import_Sellers in exam" />
+        <item itemvalue="JUnit.softuni.exam.readFile in exam" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a2df72e6-13a3-4192-a542-11e5f14d78ef" name="Changes" comment="" />
+      <created>1732391843493</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732391843493</updated>
+      <workItem from="1732391847495" duration="8693000" />
+      <workItem from="1732440578036" duration="25000" />
+      <workItem from="1732440752514" duration="104000" />
+      <workItem from="1732441722803" duration="7000" />
+      <workItem from="1732442230816" duration="246000" />
+      <workItem from="1732443243890" duration="26000" />
+      <workItem from="1732518687635" duration="774000" />
+      <workItem from="1732520190477" duration="225000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
