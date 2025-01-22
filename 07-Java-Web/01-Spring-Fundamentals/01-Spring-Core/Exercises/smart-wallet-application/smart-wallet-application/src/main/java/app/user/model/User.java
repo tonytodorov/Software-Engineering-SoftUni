@@ -34,7 +34,7 @@ public class User {
     @Column(name = "profile_picture")
     private String profilePicture;
 
-    @Column(nullable = false, unique = true)
+    @Column(unique = true)
     private String email;
 
     @Column(nullable = false)
@@ -58,8 +58,11 @@ public class User {
     private LocalDateTime updatedOn;
 
     @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
+    @OrderBy("createdOn DESC")
     private List<Subscription> subscriptions = new ArrayList<>();
 
     @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
+    @OrderBy("createdOn ASC")
     private List<Wallet> wallets = new ArrayList<>();
+
 }

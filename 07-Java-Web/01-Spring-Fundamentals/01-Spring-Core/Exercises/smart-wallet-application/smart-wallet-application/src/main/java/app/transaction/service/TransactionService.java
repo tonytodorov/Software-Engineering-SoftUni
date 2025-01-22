@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Currency;
+import java.util.List;
+import java.util.UUID;
 
 @Slf4j
 @Service
@@ -41,5 +43,9 @@ public class TransactionService {
                 .build();
 
         return transactionRepository.save(transaction);
+    }
+
+    public List<Transaction> getAllTransactions() {
+        return transactionRepository.findAllByOwnerIdOrderByCreatedOnDesc(UUID.fromString("0dbf6c0a-b381-4069-94cc-2597df0378b8"));
     }
 }
