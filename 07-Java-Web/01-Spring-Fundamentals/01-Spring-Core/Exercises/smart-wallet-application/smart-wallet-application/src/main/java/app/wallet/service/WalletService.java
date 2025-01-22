@@ -83,24 +83,24 @@ public class WalletService {
     }
 
 
-    @Transactional
-    public Transaction charge(User user, UUID walletId, BigDecimal amount, String chargeDescription) {
-        Wallet wallet = getWalletById(walletId);
-
-        if (wallet.getStatus() == WalletStatus.ACTIVE && wallet.getBalance().compareTo(amount) >= 0) {
-            BigDecimal newBalance = wallet.getBalance().subtract(amount);
-
-            wallet.setBalance(newBalance);
-            walletRepository.save(wallet);
-
-            return transactionService.createNewTransaction(
-                    wallet.getOwner(),
-
-                    );
-        }
-
-        return transactionService.createNewTransaction();
-    }
+//    @Transactional
+//    public Transaction charge(User user, UUID walletId, BigDecimal amount, String chargeDescription) {
+//        Wallet wallet = getWalletById(walletId);
+//
+//        if (wallet.getStatus() == WalletStatus.ACTIVE && wallet.getBalance().compareTo(amount) >= 0) {
+//            BigDecimal newBalance = wallet.getBalance().subtract(amount);
+//
+//            wallet.setBalance(newBalance);
+//            walletRepository.save(wallet);
+//
+//            return transactionService.createNewTransaction(
+//                    wallet.getOwner(),
+//
+//                    );
+//        }
+//
+//        return transactionService.createNewTransaction();
+//    }
 
 
     private Wallet getWalletById(UUID walletId) {
