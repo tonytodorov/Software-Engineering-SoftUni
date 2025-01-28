@@ -1,10 +1,12 @@
 package app.user.service;
 
 import app.exception.DomainException;
+import app.subscription.model.Subscription;
 import app.subscription.service.SubscriptionService;
 import app.user.model.User;
 import app.user.model.UserRole;
 import app.user.repository.UserRepository;
+import app.wallet.model.Wallet;
 import app.wallet.service.WalletService;
 import app.web.dto.LoginRequest;
 import app.web.dto.RegisterRequest;
@@ -46,8 +48,11 @@ public class UserService {
 
         User user = userRepository.save(initializeUser(registerRequest));
 
-        subscriptionService.createDefaultSubscription(user);
-        walletService.createNewWallet(user);
+        Subscription defaultSubscription = subscriptionService.createDefaultSubscription(user);
+        user.setSubscriptions(List.of(defaultSubscription));
+
+        Wallet newWallet = walletService.createNewWallet(user);
+        user.setWallets(List.of(newWallet));
 
         log.info("User [%s] has been created!".formatted(user.getUsername()));
 

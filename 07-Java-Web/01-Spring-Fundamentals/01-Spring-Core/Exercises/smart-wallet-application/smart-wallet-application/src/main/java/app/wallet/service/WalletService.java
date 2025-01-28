@@ -35,13 +35,15 @@ public class WalletService {
         this.transactionService = transactionService;
     }
 
-    public void createNewWallet(User user) {
+    public Wallet createNewWallet(User user) {
         Wallet wallet = initializeWallet(user);
 
         walletRepository.save(wallet);
 
         log.info("Successfully created new wallet with id [%s] and balance [%.2f]"
                 .formatted(user.getId(), wallet.getBalance()));
+
+        return wallet;
     }
 
     @Transactional

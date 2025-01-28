@@ -22,7 +22,7 @@ public class SubscriptionController {
     }
 
     @GetMapping
-    public String subscriptions() {
+    public String getUpgradePage() {
         return "upgrade";
     }
 

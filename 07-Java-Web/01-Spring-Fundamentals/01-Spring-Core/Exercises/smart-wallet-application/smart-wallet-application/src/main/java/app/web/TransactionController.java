@@ -5,11 +5,13 @@ import app.transaction.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
 @Controller
+@RequestMapping("/transactions")
 public class TransactionController {
 
     private final TransactionService transactionService;
@@ -19,8 +21,8 @@ public class TransactionController {
         this.transactionService = transactionService;
     }
 
-    @GetMapping("/transactions")
-    public ModelAndView transactions() {
+    @GetMapping
+    public ModelAndView getTransactions() {
         ModelAndView modelAndView = new ModelAndView();
 
         modelAndView.setViewName("transactions");
