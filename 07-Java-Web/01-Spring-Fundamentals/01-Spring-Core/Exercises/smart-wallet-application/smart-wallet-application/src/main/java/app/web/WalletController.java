@@ -20,7 +20,7 @@ public class WalletController {
     }
 
     @GetMapping("/wallets")
-    public String wallets() {
+    public String getWallets() {
 
 //        ModelAndView modelAndView = new ModelAndView();
 //        modelAndView.setViewName("wallets");
