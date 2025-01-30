@@ -29,8 +29,9 @@ public class IndexController {
     }
 
     @GetMapping("/login")
-    public String getLoginPage() {
-        return "login";
+    public ModelAndView getLoginPage() {
+
+        return null;
     }
 
     @GetMapping("/register")
