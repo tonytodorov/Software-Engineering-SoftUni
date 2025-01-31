@@ -1,5 +1,6 @@
 package app.transaction.service;
 
+import app.exception.DomainException;
 import app.transaction.model.Transaction;
 import app.transaction.model.TransactionStatus;
 import app.transaction.model.TransactionType;
@@ -45,7 +46,13 @@ public class TransactionService {
         return transactionRepository.save(transaction);
     }
 
-    public List<Transaction> getAllTransactions() {
-        return transactionRepository.findAllByOwnerIdOrderByCreatedOnDesc(UUID.fromString("0dbf6c0a-b381-4069-94cc-2597df0378b8"));
+    public List<Transaction> getAllByOwnerId(UUID ownerId) {
+
+        return transactionRepository.findAllByOwnerIdOrderByCreatedOnDesc(ownerId);
+    }
+
+    public Transaction getById(UUID id) {
+
+        return transactionRepository.findById(id).orElseThrow(() -> new DomainException("Transaction with id [%s] does not exist.".formatted(id)));
     }
 }
