@@ -5,10 +5,12 @@ import app.transaction.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/transactions")
@@ -22,13 +24,26 @@ public class TransactionController {
     }
 
     @GetMapping
-    public ModelAndView getTransactions() {
+    public ModelAndView getAllTransactions() {
+
+        List<Transaction> transactions = transactionService.getAllByOwnerId(UUID.fromString("166fc504-67c9-4f3a-b0ef-831da2143a17"));
+
         ModelAndView modelAndView = new ModelAndView();
-
         modelAndView.setViewName("transactions");
+        modelAndView.addObject("transactions", transactions);
 
-        List<Transaction> allTransactions = transactionService.getAllTransactions();
-        modelAndView.addObject("transactions", allTransactions);
+        return modelAndView;
+    }
+
+
+    @GetMapping("/{id}")
+    public ModelAndView getTransactionById(@PathVariable UUID id) {
+
+        Transaction transaction = transactionService.getById(id);
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("transaction-result");
+        modelAndView.addObject("transaction", transaction);
 
         return modelAndView;
     }
