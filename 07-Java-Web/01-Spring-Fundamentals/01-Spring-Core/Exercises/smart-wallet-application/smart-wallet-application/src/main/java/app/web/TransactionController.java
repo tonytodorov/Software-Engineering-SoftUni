@@ -4,6 +4,7 @@ import app.transaction.model.Transaction;
 import app.transaction.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,9 +25,9 @@ public class TransactionController {
     }
 
     @GetMapping
-    public ModelAndView getAllTransactions() {
+    public ModelAndView getAllTransactions(@CookieValue(value = "user_id") String userId) {
 
-        List<Transaction> transactions = transactionService.getAllByOwnerId(UUID.fromString("166fc504-67c9-4f3a-b0ef-831da2143a17"));
+        List<Transaction> transactions = transactionService.getAllByOwnerId(UUID.fromString(userId));
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("transactions");

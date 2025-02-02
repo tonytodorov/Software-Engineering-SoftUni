@@ -4,10 +4,14 @@ import app.user.model.User;
 import app.user.service.UserService;
 import app.web.dto.LoginRequest;
 import app.web.dto.RegisterRequest;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -41,13 +45,14 @@ public class IndexController {
     }
 
     @PostMapping("/login")
-    public ModelAndView loginUser(@Valid LoginRequest loginRequest, BindingResult bindingResult) {
+    public ModelAndView loginUser(@Valid LoginRequest loginRequest, BindingResult bindingResult, HttpSession session) {
 
         if (bindingResult.hasErrors()) {
             return new ModelAndView("login");
         }
 
         User loggedInUser = userService.login(loginRequest);
+        session.setAttribute("user_id", loggedInUser.getId());
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("user", loggedInUser);
@@ -79,15 +84,24 @@ public class IndexController {
     }
 
     @GetMapping("/home")
-    public ModelAndView getHomePage() {
+    public ModelAndView getHomePage(HttpSession session) {
 
         ModelAndView modelAndView = new ModelAndView();
 
-        User userById = userService.getById(UUID.fromString("166fc504-67c9-4f3a-b0ef-831da2143a17"));
+        UUID userId = (UUID) session.getAttribute("user_id");
+        User userById = userService.getById(userId);
 
         modelAndView.setViewName("home");
         modelAndView.addObject("user", userById);
 
         return modelAndView;
+    }
+
+    @GetMapping("/logout")
+    public String getLogoutPage(HttpSession session) {
+
+        session.invalidate();
+
+        return "redirect:/";
     }
 }
