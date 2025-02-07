@@ -2,6 +2,7 @@ package app.web;
 
 import app.transaction.model.Transaction;
 import app.transaction.service.TransactionService;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -25,9 +26,10 @@ public class TransactionController {
     }
 
     @GetMapping
-    public ModelAndView getAllTransactions(@CookieValue(value = "user_id") String userId) {
+    public ModelAndView getAllTransactions(HttpSession session) {
 
-        List<Transaction> transactions = transactionService.getAllByOwnerId(UUID.fromString(userId));
+        UUID userId = (UUID) session.getAttribute("user_id");
+        List<Transaction> transactions = transactionService.getAllByOwnerId(userId);
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("transactions");

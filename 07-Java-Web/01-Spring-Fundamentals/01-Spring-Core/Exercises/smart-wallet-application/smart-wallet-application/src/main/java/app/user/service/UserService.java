@@ -107,4 +107,22 @@ public class UserService {
                 .build();
     }
 
+    public void switchStatus(UUID id) {
+        User user = getById(id);
+
+        user.setActive(!user.isActive());
+        userRepository.save(user);
+    }
+
+    public void switchRole(UUID id) {
+        User user = getById(id);
+
+        if (user.getRole() == UserRole.USER) {
+            user.setRole(UserRole.ADMIN);
+        } else {
+            user.setRole(UserRole.USER);
+        }
+
+        userRepository.save(user);
+    }
 }

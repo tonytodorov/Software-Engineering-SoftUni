@@ -1,5 +1,6 @@
 package app.web;
 
+import app.security.RequireAdminRole;
 import app.user.model.User;
 import app.user.service.UserService;
 import app.web.dto.UserEditRequest;
@@ -28,6 +29,19 @@ public class UserController {
         this.userService = userService;
     }
 
+
+    @RequireAdminRole
+    @GetMapping
+    private ModelAndView getAllUsers() {
+
+        List<User> allUsers = userService.getAllUsers();
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("users");
+        modelAndView.addObject("users", allUsers);
+
+        return modelAndView;
+    }
 
     @GetMapping("/{id}/profile")
     public ModelAndView getProfileMenu(@PathVariable UUID id) {
@@ -61,5 +75,21 @@ public class UserController {
         userService.editUserDetails(id, userEditRequest);
 
         return new ModelAndView("redirect:/home");
+    }
+
+    @PutMapping("/{id}/status")
+    public String switchUserStatus(@PathVariable UUID id) {
+
+        userService.switchStatus(id);
+
+        return "redirect:/users";
+    }
+
+    @PutMapping("/{id}/role")
+    public String switchUserRole(@PathVariable UUID id) {
+
+        userService.switchRole(id);
+
+        return "redirect:/users";
     }
 }
