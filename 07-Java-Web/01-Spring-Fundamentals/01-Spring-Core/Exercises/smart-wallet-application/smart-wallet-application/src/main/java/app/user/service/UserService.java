@@ -14,6 +14,8 @@ import app.web.dto.UserEditRequest;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -39,6 +41,7 @@ public class UserService {
         this.walletService = walletService;
     }
 
+    @CacheEvict(value = "users", allEntries = true)
     @Transactional
     public User register(RegisterRequest registerRequest) {
         Optional<User> optionalUser = userRepository.findByUsername(registerRequest.getUsername());
@@ -76,6 +79,7 @@ public class UserService {
         return user;
     }
 
+    @CacheEvict(value = "users", allEntries = true)
     public void editUserDetails(UUID userId, UserEditRequest userEditRequest) {
         User user = getById(userId);
 
@@ -87,6 +91,7 @@ public class UserService {
         userRepository.save(user);
     }
 
+    @Cacheable("users")
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
@@ -107,13 +112,15 @@ public class UserService {
                 .build();
     }
 
+    @CacheEvict(value = "users", allEntries = true)
     public void switchStatus(UUID id) {
         User user = getById(id);
 
         user.setActive(!user.isActive());
         userRepository.save(user);
     }
-
+    
+    @CacheEvict(value = "users", allEntries = true)
     public void switchRole(UUID id) {
         User user = getById(id);
 

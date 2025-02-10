@@ -1,6 +1,8 @@
 package app.wallet.service;
 
+import app.email.service.EmailService;
 import app.exception.DomainException;
+import app.tracking.service.TrackingService;
 import app.transaction.model.Transaction;
 import app.transaction.model.TransactionStatus;
 import app.transaction.model.TransactionType;
@@ -9,6 +11,7 @@ import app.user.model.User;
 import app.wallet.model.Wallet;
 import app.wallet.model.WalletStatus;
 import app.wallet.repository.WalletRepository;
+import app.web.dto.PaymentNotificationEvent;
 import app.web.dto.TransferRequest;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
@@ -33,7 +36,7 @@ public class WalletService {
     private final ApplicationEventPublisher eventPublisher;
 
     @Autowired
-    public WalletService(WalletRepository walletRepository, TransactionService transactionService, ApplicationEventPublisher eventPublisher) {
+    public WalletService(WalletRepository walletRepository, TransactionService transactionService, ApplicationEventPublisher eventPublisher, EmailService emailService, TrackingService trackingService, TrackingService trackingService1) {
         this.walletRepository = walletRepository;
         this.transactionService = transactionService;
         this.eventPublisher = eventPublisher;
@@ -75,8 +78,6 @@ public class WalletService {
 
         walletRepository.save(wallet);
 
-
-
         return transactionService.createNewTransaction(
                 wallet.getOwner(),
                 SMART_WALLET_LTD,
@@ -106,6 +107,15 @@ public class WalletService {
         wallet.setUpdatedOn(LocalDateTime.now());
 
         walletRepository.save(wallet);
+
+        PaymentNotificationEvent event = PaymentNotificationEvent.builder()
+                .userId(user.getId())
+                .paymentTime(LocalDateTime.now())
+                .email(user.getEmail())
+                .amount(amount)
+                .build();
+
+        eventPublisher.publishEvent(event);
 
         return transactionService.createNewTransaction(
                 user,
