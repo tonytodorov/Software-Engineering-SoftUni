@@ -1,13 +1,13 @@
-package com.philately;
+package Philately;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PhilatelyApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PhilatelyApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

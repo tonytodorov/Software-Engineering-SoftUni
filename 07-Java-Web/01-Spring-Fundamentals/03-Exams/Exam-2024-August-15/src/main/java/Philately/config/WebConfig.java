@@ -1,16 +1,20 @@
-package com.philately.config;
+package Philately.config;
 
-import com.philately.security.SessionInterceptor;
+import Philately.security.SessionInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class WebConfiguration implements WebMvcConfigurer {
+public class WebConfig implements WebMvcConfigurer {
 
     @Autowired
-    private SessionInterceptor sessionInterceptor;
+    private final SessionInterceptor sessionInterceptor;
+
+    public WebConfig(SessionInterceptor sessionInterceptor) {
+        this.sessionInterceptor = sessionInterceptor;
+    }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -20,3 +24,5 @@ public class WebConfiguration implements WebMvcConfigurer {
                 .excludePathPatterns("/css/**", "/img/**");
     }
 }
+
+
