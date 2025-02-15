@@ -2,19 +2,18 @@ spring:
   jpa:
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: 'TRUE'
     hibernate:
       ddl-auto: update
     open-in-view: 'false'
   mvc:
-    hiddenmethod:
+    hidden method:
       filter:
         enabled: 'true'
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    password: ''
-    username: ''
+    password: '12345'
+    username: 'root'
     url: jdbc:mysql://localhost:3306/philately?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
 logging:
   level:
