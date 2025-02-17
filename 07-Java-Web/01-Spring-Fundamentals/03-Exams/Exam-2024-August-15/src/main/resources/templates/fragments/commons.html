@@ -13,18 +13,18 @@
 <header>
     <nav>
         <div class="home">
-            <a href="/">Philately App</a>
-            <a href="/">Add Stamp</a>
+            <a th:href="@{/}">Philately App</a>
+            <a th:if="${user}" th:href="@{/stamp/new}">Add Stamp</a>
         </div>
         <div class="links">
-            <li>
-                <a href="/">Login</a>
+            <li th:unless="${user}">
+                <a th:href="@{/login}">Login</a>
             </li>
-            <li>
-                <a href="/">Register</a>
+            <li th:unless="${user}">
+                <a th:href="@{/register}">Register</a>
             </li>
-            <li>
-                <a href="/">Logout</a>
+            <li th:if="${user}">
+                <a th:href="@{/logout}">Logout</a>
             </li>
         </div>
     </nav>
