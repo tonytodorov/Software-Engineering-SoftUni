@@ -32,6 +32,7 @@
 
       <label for="password">Password</label>
       <input type="password" placeholder="Password" id="password" th:field="*{password}">
+      <p class="alert-warning" th:if="${errorMessage}" th:text="${errorMessage}"></p>
 
       <button type="submit">Log In</button>
 

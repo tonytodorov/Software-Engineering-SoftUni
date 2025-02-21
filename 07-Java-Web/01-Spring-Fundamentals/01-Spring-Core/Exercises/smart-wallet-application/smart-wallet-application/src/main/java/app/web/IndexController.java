@@ -1,5 +1,6 @@
 package app.web;
 
+import app.security.AuthenticationDetails;
 import app.user.model.User;
 import app.user.service.UserService;
 import app.web.dto.LoginRequest;
@@ -9,12 +10,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.CookieValue;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.UUID;
@@ -35,36 +34,40 @@ public class IndexController {
     }
 
     @GetMapping("/login")
-    public ModelAndView getLoginPage() {
-        ModelAndView modelAndView = new ModelAndView();
+    public ModelAndView getLoginPage(@RequestParam(value = "error", required = false) String error) {
 
+        ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("login");
         modelAndView.addObject("loginRequest", new LoginRequest());
 
-        return modelAndView;
-    }
-
-    @PostMapping("/login")
-    public ModelAndView loginUser(@Valid LoginRequest loginRequest, BindingResult bindingResult, HttpSession session) {
-
-        if (bindingResult.hasErrors()) {
-            return new ModelAndView("login");
+        if (error != null) {
+            modelAndView.addObject("errorMessage", "Incorrect username or password.");
         }
 
-        User loggedInUser = userService.login(loginRequest);
-        session.setAttribute("user_id", loggedInUser.getId());
-
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("user", loggedInUser);
-        modelAndView.setViewName("redirect:/home");
-
         return modelAndView;
     }
+
+//    @PostMapping("/login")
+//    public ModelAndView loginUser(@Valid LoginRequest loginRequest, BindingResult bindingResult, HttpSession session) {
+//
+//        if (bindingResult.hasErrors()) {
+//            return new ModelAndView("login");
+//        }
+//
+//        User loggedInUser = userService.login(loginRequest);
+//        session.setAttribute("user_id", loggedInUser.getId());
+//
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.addObject("user", loggedInUser);
+//        modelAndView.setViewName("redirect:/home");
+//
+//        return modelAndView;
+//    }
 
     @GetMapping("/register")
     public ModelAndView getRegisterPage() {
-        ModelAndView modelAndView = new ModelAndView();
 
+        ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("register");
         modelAndView.addObject("registerRequest", new RegisterRequest());
 
@@ -84,24 +87,22 @@ public class IndexController {
     }
 
     @GetMapping("/home")
-    public ModelAndView getHomePage(HttpSession session) {
+    public ModelAndView getHomePage(@AuthenticationPrincipal AuthenticationDetails authenticationDetails) {
+
+        User userById = userService.getById(authenticationDetails.getId());
 
         ModelAndView modelAndView = new ModelAndView();
-
-        UUID userId = (UUID) session.getAttribute("user_id");
-        User userById = userService.getById(userId);
-
         modelAndView.setViewName("home");
         modelAndView.addObject("user", userById);
 
         return modelAndView;
     }
 
-    @GetMapping("/logout")
-    public String getLogoutPage(HttpSession session) {
-
-        session.invalidate();
-
-        return "redirect:/";
-    }
+//    @GetMapping("/logout")
+//    public String getLogoutPage(HttpSession session) {
+//
+//        session.invalidate();
+//
+//        return "redirect:/";
+//    }
 }
