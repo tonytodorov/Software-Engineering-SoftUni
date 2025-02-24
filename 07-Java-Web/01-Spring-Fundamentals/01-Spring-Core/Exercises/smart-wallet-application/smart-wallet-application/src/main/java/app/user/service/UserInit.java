@@ -1,7 +1,6 @@
 package app.user.service;
 
 import app.user.model.Country;
-import app.web.dto.MyUserRecord;
 import app.web.dto.RegisterRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -24,7 +23,6 @@ public class UserInit implements CommandLineRunner {
             return;
         }
 
-        MyUserRecord myUserRecord = new MyUserRecord("Jik", 24);
 
         RegisterRequest registerRequest = RegisterRequest.builder()
                 .username("Test123")

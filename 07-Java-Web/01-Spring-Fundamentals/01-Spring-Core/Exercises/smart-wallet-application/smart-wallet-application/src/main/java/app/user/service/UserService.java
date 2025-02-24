@@ -1,6 +1,7 @@
 package app.user.service;
 
 import app.exception.DomainException;
+import app.security.AuthenticationDetails;
 import app.subscription.model.Subscription;
 import app.subscription.service.SubscriptionService;
 import app.user.model.User;
@@ -8,7 +9,6 @@ import app.user.model.UserRole;
 import app.user.repository.UserRepository;
 import app.wallet.model.Wallet;
 import app.wallet.service.WalletService;
-import app.web.dto.LoginRequest;
 import app.web.dto.RegisterRequest;
 import app.web.dto.UserEditRequest;
 import jakarta.transaction.Transactional;
@@ -16,6 +16,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +29,7 @@ import java.util.UUID;
 
 @Slf4j
 @Service
-public class UserService {
+public class UserService implements UserDetailsService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
@@ -55,7 +58,7 @@ public class UserService {
         Subscription defaultSubscription = subscriptionService.createDefaultSubscription(user);
         user.setSubscriptions(List.of(defaultSubscription));
 
-        Wallet newWallet = walletService.createNewWallet(user);
+        Wallet newWallet = walletService.initializeFirstWallet(user);
         user.setWallets(List.of(newWallet));
 
         log.info("User [%s] has been created!".formatted(user.getUsername()));
@@ -63,21 +66,21 @@ public class UserService {
         return user;
     }
 
-    public User login(LoginRequest loginRequest) {
-        Optional<User> optionalUser = userRepository.findByUsername(loginRequest.getUsername());
-
-        if (optionalUser.isEmpty()) {
-            throw new DomainException("Username or password are incorrect!");
-        }
-
-        User user = optionalUser.get();
-
-        if (!passwordEncoder.matches(loginRequest.getPassword(), user.getPassword())) {
-            throw new DomainException("Username or password are incorrect!");
-        }
-
-        return user;
-    }
+//    public User login(LoginRequest loginRequest) {
+//        Optional<User> optionalUser = userRepository.findByUsername(loginRequest.getUsername());
+//
+//        if (optionalUser.isEmpty()) {
+//            throw new DomainException("Username or password are incorrect!");
+//        }
+//
+//        User user = optionalUser.get();
+//
+//        if (!passwordEncoder.matches(loginRequest.getPassword(), user.getPassword())) {
+//            throw new DomainException("Username or password are incorrect!");
+//        }
+//
+//        return user;
+//    }
 
     @CacheEvict(value = "users", allEntries = true)
     public void editUserDetails(UUID userId, UserEditRequest userEditRequest) {
@@ -131,5 +134,15 @@ public class UserService {
         }
 
         userRepository.save(user);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
+        User user = userRepository
+                .findByUsername(username)
+                .orElseThrow(() -> new DomainException("User [%s] does not exist!".formatted(username)));
+
+        return new AuthenticationDetails(user.getId(), username, user.getPassword(), user.getRole(), user.isActive());
     }
 }
