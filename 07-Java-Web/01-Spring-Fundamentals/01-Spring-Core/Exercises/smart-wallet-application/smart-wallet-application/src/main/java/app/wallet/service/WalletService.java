@@ -1,7 +1,7 @@
 package app.wallet.service;
 
-import app.email.service.EmailService;
 import app.exception.DomainException;
+import app.notification.service.NotificationService;
 import app.subscription.model.Subscription;
 import app.subscription.model.SubscriptionType;
 import app.tracking.service.TrackingService;
@@ -36,7 +36,7 @@ public class WalletService {
     private final ApplicationEventPublisher eventPublisher;
 
     @Autowired
-    public WalletService(WalletRepository walletRepository, TransactionService transactionService, ApplicationEventPublisher eventPublisher, EmailService emailService, TrackingService trackingService, TrackingService trackingService1) {
+    public WalletService(WalletRepository walletRepository, TransactionService transactionService, ApplicationEventPublisher eventPublisher) {
         this.walletRepository = walletRepository;
         this.transactionService = transactionService;
         this.eventPublisher = eventPublisher;
