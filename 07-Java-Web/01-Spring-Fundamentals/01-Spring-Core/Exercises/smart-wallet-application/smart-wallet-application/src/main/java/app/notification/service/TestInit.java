@@ -20,8 +20,8 @@ public class TestInit implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        ResponseEntity<String> response = notificationClient.getHelloMessage("Vik");
-
-        System.out.println(response.getBody());
+//        ResponseEntity<String> response = notificationClient.getHelloMessage("Vik");
+//
+//        System.out.println(response.getBody());
     }
 }
